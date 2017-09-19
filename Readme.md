@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Володченко](https://up.htmlacademy.ru/adaptive/12/user/447815).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Ожерельев](https://htmlacademy.ru/profile/id29002).
 
 ---
 
