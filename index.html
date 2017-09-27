@@ -150,12 +150,18 @@
           </table>
         </div>
 
-        <span class="visually-hidden">Всплывающая карта</span>
+        <div class="contacts__map-wrapper">
+          <div class="contacts__map">
+            <span class="visually-hidden">Карта проезда</span>
 
-        <button type="button" class="contacts__button button">Напишите нам</button>
+            <img src="http://placehold.it/320x457" width="320" height="457" alt="Карта проезда">
+          </div>
+
+          <button type="button" class="contacts__button button">Напишите нам</button>
+        </div>
       </section> <!-- end contacts -->
 
-      <section class="modal-cart modal">
+      <section class="modal-cart modal visually-hidden">
         <div class="modal-cart__wrapper">
           <h2 class="modal-cart__header">Добавить в корзину</h2>
 
@@ -173,31 +179,33 @@
     </main>
 
     <footer class="main-footer">
-      <ul class="main-footer__list">
-        <li>
-          <ul class="main-footer__item footer-social">
-            <li class="footer-social__item footer-social__item--insta">
-              <a href="#">Instagram</a>
-            </li>
-            <li class="footer-social__item footer-social__item--fb">
-              <a href="#">Facebook</a>
-            </li>
-            <li class="footer-social__item footer-social__item--twit">
-              <a href="#">Twitter</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="main-footer__item footer-developer">
-            <li class="footer-developer__item">Разработано</li>
-            <li class="footer-developer__item">
-              <span class="visually-hidden">HTML-academy</span>
+      <div class="main-footer__wrapper">
+        <ul class="main-footer__list">
+          <li>
+            <ul class="main-footer__item footer-social">
+              <li class="footer-social__item footer-social__item--insta">
+                <a href="#">Instagram</a>
+              </li>
+              <li class="footer-social__item footer-social__item--fb">
+                <a href="#">Facebook</a>
+              </li>
+              <li class="footer-social__item footer-social__item--twit">
+                <a href="#">Twitter</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="main-footer__item footer-developer">
+              <li class="footer-developer__item">Разработано</li>
+              <li class="footer-developer__item">
+                <span class="visually-hidden">HTML-academy</span>
 
-              <a href="#">HTML-academy</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+                <a href="#">HTML-academy</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </footer> <!-- end footer -->
   </body>
 </html>
