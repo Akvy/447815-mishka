@@ -1,1 +1,44 @@
-// body { background: yellow; }
+@import "variables.less";
+
+@import "mixins.less";
+
+@import "blocks/page-header.less";
+
+@import "blocks/main-nav.less";
+
+@import "blocks/header-list.less";
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/opensans.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/opensansbold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("../fonts/myriadpro-regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  line-height: 24px;
+  color: #444444;
+  font-weight: 100;
+
+  background-color: #ffffff;
+}

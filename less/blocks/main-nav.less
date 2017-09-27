@@ -1,0 +1,27 @@
+.main-nav {
+  position: relative;
+
+
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0px;
+  left: -42px;
+
+  padding-bottom: 30px;
+}
+
+.main-nav__wrapper {
+    display: none;
+}
+
+.main-nav__toggle:hover ~ .main-nav__wrapper,
+.main-nav__toggle:active ~ .main-nav__wrapper,
+.main-nav__wrapper:hover {
+  position: absolute;
+  right: -20px;
+  top: 59px;
+
+  display: block;
+}
