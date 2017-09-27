@@ -3,17 +3,21 @@
 }
 
 .header-list__item {
-  width: 320px;
+  .mobile-container();
+
   padding-left: 75px;
   padding-top: 33px;
+  padding-bottom: 30px;
   box-sizing: border-box;
 
   vertical-align: middle;
 
+  background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
 }
 
-.header-list__item:last-of-type {
-  padding-bottom: 30px;
+.header-list__item:first-of-type {
+  border-top: 1px solid #ececec;
 }
 
 .header-list__item a {
