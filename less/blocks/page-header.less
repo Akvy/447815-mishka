@@ -3,6 +3,8 @@
 }
 
 .page-header__wrapper {
+  position: relative;
+
   padding: 20px;
   padding-bottom: 16px;
   display: flex;
@@ -17,4 +19,42 @@
 .page-header__logo-image {
   margin-top: 2px;
   margin-left: -3px;
+}
+
+.page-header__delivery-note {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+
+  .page-header {
+    min-width: 768px;
+  }
+
+  .page-header__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    // margin: 0;
+  }
+
+  .page-header__logo-image {
+    margin-top: 11px;
+    margin-left: 57px;
+  }
+
+  .page-header__delivery-note {
+    position: absolute;
+    bottom: 30px;
+    right: 35px;
+
+
+    display: block;
+  }
+
+
 }
