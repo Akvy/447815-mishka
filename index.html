@@ -3,46 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин MISHKA">
-      </a>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин MISHKA">
+        </a>
 
-      <nav class="main-nav">
-        <button type="button" class="main-nav__toggle">Открыть меню</button>
+        <nav class="main-nav">
+          <button type="button" class="main-nav__toggle">Открыть меню</button>
 
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list header-list">
-            <li class="header-list__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="header-list__item">
-              <a href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="header-list__item">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="header-list__item">
-              <a href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
-      </nav> <!-- end main nav -->
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list header-list">
+              <li class="header-list__item">
+                <a href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="header-list__item">
+                <a href="form.html">Вязание на заказ</a>
+              </li>
+              <li class="header-list__item">
+                <a href="#">Поиск по сайту</a>
+              </li>
+              <li class="header-list__item">
+                <a href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav> <!-- end main nav -->
+      </div>
     </header> <!-- end header -->
 
     <main class="page-main">
       <section class="features">
         <div class="features__wrapper">
-          <h1 class="features__header">Милые штуки ручной работы для дома</h1>
+          <h1 class="features__header">Милые штуки <br> ручной <br> работы для дома</h1>
 
           <ul class="features__list features-type-list">
             <li class="features-type-list__item">
-              <a href="#">Предметы интерьера</a>
+              <a href="#">Предметы
+интерьера</a>
             </li>
             <li class="features-type-list__item">
-              <a href="#">Детские игрушки</a>
+              <a href="#">Детские
+игрушки</a>
             </li>
           </ul>
         </div>
@@ -71,16 +76,18 @@
             </tr>
           </table>
 
-          <img class="trending__picture" src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+          <img class="trending__picture" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
 
-          <span class="trending__price">Цена: 990 руб.</span>
+          <div class="trending__price-wrapper">
+            <span class="trending__price">Цена: 990 руб.</span>
 
-          <button type="button" class="trending__button button">Заказать</button>
+            <button type="button" class="trending__button button">Заказать</button>
+          </div>
         </div>
       </section> <!-- end trending -->
 
       <section class="about-us">
-        <div class="abuut-us__wrapper">
+        <div class="about-us__wrapper">
           <h2 class="about-us__header">Коротко о нас:</h2>
 
           <ul class="about-us__list">
@@ -112,16 +119,18 @@
 
           <p class="reviews__item">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 
-          <b class="reviews__author">Анастасия Красильникова</b>
+          <div class="reviews__author-wrapper">
+            <b class="reviews__author">Анастасия Красильникова</b>
 
-          <span class="reviews__author-mail">@misssssiskras</span>
+            <span class="reviews__author-mail">@misssssiskras</span>
 
-          <p class="reviews__toggle-box">
-            <button type="button" class="reviews__prev">Предыдущий</button>
-            <button type="button" class="reviews__next">Следующий</button>
-          </p>
+            <p class="reviews__toggle-box">
+              <button type="button" class="reviews__prev">Предыдущий</button>
+              <button type="button" class="reviews__next">Следующий</button>
+            </p>
 
-          <button type="button" class="reviews__button button">Написать</button>
+            <button type="button" class="reviews__button button">Написать</button>
+          </div>
         </div>
       </section> <!-- end reviews -->
 
@@ -130,23 +139,29 @@
           <h2 class="contacts__header">Контакты</h2>
 
           <table class="contacts__table">
-            <tr>
+            <tr class="contacts__table-row-1">
               <td class="contacts__table-class">e-mail:</td>
               <td class="contacts__table-value contacts__table-value--underlined">info@mimimishkashop.ru</td>
             </tr>
-            <tr>
+            <tr class="contacts__table-row-2">
               <td class="contacts__table-class">адрес:</td>
-              <td class="contacts__table-value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+              <td class="contacts__table-value">г. Санкт-Петербург, ул. Большая Конюшенная, <br> д. 19/8, офис 101</td>
             </tr>
           </table>
         </div>
 
-        <span class="visually-hidden">Всплывающая карта</span>
+        <div class="contacts__map-wrapper">
+          <div class="contacts__map">
+            <span class="visually-hidden">Карта проезда</span>
 
-        <button type="button" class="contacts__button button">Напишите нам</button>
+            <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта проезда">
+          </div>
+
+          <button type="button" class="contacts__button button">Напишите нам</button>
+        </div>
       </section> <!-- end contacts -->
 
-      <section class="modal-cart modal">
+      <section class="modal-cart modal visually-hidden">
         <div class="modal-cart__wrapper">
           <h2 class="modal-cart__header">Добавить в корзину</h2>
 
@@ -164,31 +179,33 @@
     </main>
 
     <footer class="main-footer">
-      <ul class="main-footer__list">
-        <li>
-          <ul class="main-footer__item footer-social">
-            <li class="footer-social__item footer-social__item--insta">
-              <a href="#">Instagram</a>
-            </li>
-            <li class="footer-social__item footer-social__item--fb">
-              <a href="#">Facebook</a>
-            </li>
-            <li class="footer-social__item footer-social__item--twit">
-              <a href="#">Twitter</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="main-footer__item footer-developer">
-            <li class="footer-developer__item">Разработано</li>
-            <li class="footer-developer__item">
-              <span class="visually-hidden">HTML-academy</span>
+      <div class="main-footer__wrapper">
+        <ul class="main-footer__list">
+          <li>
+            <ul class="main-footer__item footer-social">
+              <li class="footer-social__item footer-social__item--insta">
+                <a href="#">Instagram</a>
+              </li>
+              <li class="footer-social__item footer-social__item--fb">
+                <a href="#">Facebook</a>
+              </li>
+              <li class="footer-social__item footer-social__item--twit">
+                <a href="#">Twitter</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="main-footer__item footer-developer">
+              <li class="footer-developer__item">Разработано</li>
+              <li class="footer-developer__item">
+                <span class="visually-hidden">HTML-academy</span>
 
-              <a href="#">HTML-academy</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+                <a href="#">HTML-academy</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </footer> <!-- end footer -->
   </body>
 </html>
