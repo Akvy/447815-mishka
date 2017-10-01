@@ -28,18 +28,20 @@
 @media (min-width: @tablet-width) {
 
   .page-header {
-    min-width: 768px;
+    min-width: @tablet-width;
   }
 
   .page-header__wrapper {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0px;
     justify-content: flex-start;
+
+    border-bottom: none;
   }
 
   .page-header__logo {
     position: absolute;
-    // margin: 0;
   }
 
   .page-header__logo-image {
@@ -49,12 +51,11 @@
 
   .page-header__delivery-note {
     position: absolute;
-    bottom: 30px;
-    right: 35px;
-
+    bottom: 15px;
+    right: 49px;
 
     display: block;
+
+    letter-spacing: -0.5px;
   }
-
-
 }
