@@ -9,3 +9,22 @@
 
   background-color: @light-gray;
 }
+
+.footer-logo {
+  display: none;
+}
+
+@media (min-width:@tablet-width) {
+  .main-footer__wrapper {
+    width: @tablet-width;
+  }
+
+  .main-footer__list {
+    margin-top: 57px;
+    display: flex;
+  }
+
+  .footer-logo {
+    display: block;
+  }
+}
