@@ -153,3 +153,62 @@
     padding-right: 100px;
   }
 }
+
+@media (min-width:@desktop-width) {
+  .trending__wrapper {
+    position: relative;
+
+    margin-right: 16px;
+    width: @desktop-width;
+  }
+
+  .trending__header-wrapper {
+    position: absolute;
+    top: 140px;
+    left: 62px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .trending__header {
+    .desktop-header();
+
+    margin-top: -15px;
+    order: 2;
+  }
+
+  .trending__sub-header {
+    margin-top: 0;
+    margin-right: 49px;
+  }
+
+  .trending__content-wrapper {
+    margin-top: 16px;
+    margin-left: 145px;
+  }
+
+  .trending__description-wrapper {
+    margin-right: 16px;
+  }
+
+  .trending__description {
+    margin-top: 168px;
+    margin-left: 4px;
+  }
+
+  .trending__table {
+    margin-top: 47px;
+  }
+
+  .trending__picture {
+    width: 525px;
+    height: 636px;
+  }
+
+  .trending__price-wrapper {
+    bottom: 0;
+    left: 195px;
+  }
+
+}
