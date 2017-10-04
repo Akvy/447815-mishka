@@ -31,12 +31,18 @@
 
 @media (min-width: @tablet-width) {
   .header-list {
-    margin-top: 69px;
+    margin-top: 70px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 
     background-color: @lighter-gray;
+  }
+
+  .header-list--inner {
+    margin-top: 69px;
+
+    background-color: @light-gray;
   }
 
   .header-list__item {
@@ -78,6 +84,19 @@
       }
   }
 
+  .header-list__item--inner {
+    padding-top: 17px;
+
+    background-color: @light-gray;
+
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+        margin-top: -74px;
+
+        background-image: linear-gradient(@white 74px; @light-gray 74px);
+      }
+  }
+
   .header-list__link {
     font-family: "Open Sans";
     font-size: 15px;
@@ -90,42 +109,42 @@
     }
 }
 
-@media (min-width:@desktop-width) {
-  .header-list {
-    margin-top: 31px;
-    margin-left: 98px;
-    width: @desktop-width;
-
-    background-color: @white;
-  }
-
-  .header-list__item {
-    margin: 0;
-    margin-left: 25px;
-    padding: 0;
-    width: 195px;
-
-    background-color: @white;
-
-    &:nth-of-type(1),
-    &:nth-of-type(3),
-    &:nth-of-type(4) {
-      margin: 0;
-      padding: 0;
-    }
-
-    &:nth-of-type(3) {
-      margin-left: 270px;
-    }
-
-    &:nth-of-type(4) {
-      padding-left: 62px;
-      width: 280px;
-    }
-  }
-
-  .header-list__link {
-    font-size: 17px;
-    line-height: 24px;
-  }
-}
+// @media (min-width:@desktop-width) {
+//   .header-list {
+//     margin-top: 31px;
+//     margin-left: 98px;
+//     width: @desktop-width;
+//
+//     background-color: @white;
+//   }
+//
+//   .header-list__item {
+//     margin: 0;
+//     margin-left: 25px;
+//     padding: 0;
+//     width: 195px;
+//
+//     background-color: @white;
+//
+//     &:nth-of-type(1),
+//     &:nth-of-type(3),
+//     &:nth-of-type(4) {
+//       margin: 0;
+//       padding: 0;
+//     }
+//
+//     &:nth-of-type(3) {
+//       margin-left: 270px;
+//     }
+//
+//     &:nth-of-type(4) {
+//       padding-left: 62px;
+//       width: 280px;
+//     }
+//   }
+//
+//   .header-list__link {
+//     font-size: 17px;
+//     line-height: 24px;
+//   }
+// }
