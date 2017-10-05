@@ -24,3 +24,30 @@
 
   display: block;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    margin-left: 0;
+    width: @tablet-width;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    display: block;
+  }
+
+  .main-nav__toggle:hover ~ .main-nav__wrapper,
+  .main-nav__toggle:active ~ .main-nav__wrapper,
+  .main-nav__wrapper:hover {
+    position: static;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: @desktop-width;
+  }
+}

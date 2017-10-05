@@ -23,3 +23,68 @@
   padding-top: 15px;
   padding-bottom: 13px;
 }
+
+@media (min-width: @tablet-width) {
+  .order-page__header {
+    .tablet-header();
+
+    width: @tablet-width;
+    padding-top: 36px;
+    padding-bottom: 90px;
+    padding-left: 2px;
+  }
+
+  .order-page__wrapper {
+    width: @tablet-width;
+    padding-top: 64px;
+    padding-left: 50px;
+  }
+
+  .order-page__description {
+    padding-right: 20px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-page__form {
+    position: relative;
+
+    margin-top: 40px;
+  }
+
+  .order-page__button {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+
+    margin: 0;
+    padding-left: 28px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-page__header {
+    .desktop-header();
+
+    padding-top: 93px;
+    padding-bottom: 110px;
+    width: 1150px;
+  }
+
+  .order-page__wrapper {
+    width: 1150px;
+  }
+
+  .order-page__description {
+    margin-top: 51px;
+    margin-left: 175px;
+    padding-right: 170px;
+  }
+
+  .order-page__button {
+    bottom: -11px;
+    left: 175px;
+  }
+}

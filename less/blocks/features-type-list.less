@@ -26,3 +26,34 @@
   color: #ffffff;
   white-space: pre;
 }
+
+@media (min-width: @tablet-width) {
+  .features-type-list {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+  }
+
+  .features-type-list__item {
+    padding-top: 28px;
+    padding-bottom: 29px;
+    padding-left: 35px;
+    flex-grow: 1;
+
+    &:first-of-type {
+      width: 87px;
+    }
+  }
+
+  .features-type-list__item a {
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features-type-list {
+    padding-top: 107px;
+    margin-left: 49px;
+    margin-right: 51px;
+  }
+}

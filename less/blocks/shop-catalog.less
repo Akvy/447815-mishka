@@ -54,3 +54,155 @@
 
   font-size: 15px;
 }
+
+
+@media (min-width: @tablet-width) {
+  .shop-catalog__header {
+    .tablet-header();
+
+    width: @tablet-width;
+    padding-top: 38px;
+    padding-bottom: 80px;
+    padding-left: 2px;
+  }
+
+  .shop-catalog__wrapper {
+    width: @tablet-width;
+  }
+
+  .shop-catalog__list {
+    padding-top: 79px;
+    padding-bottom: 0;
+    padding-left: 51px;
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .shop-catalog__list-item:not(:nth-of-type(1)) {
+    margin-top: 26px;
+  }
+
+  .shop-catalog__item {
+    width: 667px;
+    display: flex;
+  }
+
+  .shop-catalog__item-image {
+    width: 333px;
+    height: 334px;
+  }
+
+  .shop-catalog__item-wrapper {
+    margin: 0;
+    padding: 0;
+    padding-top: 26px;
+    padding-left: 27px;
+    width: 300px;
+  }
+
+  .shop-catalog__item-heading {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .shop-catalog__item-heading--big_basket {
+    padding-right: 60px;
+  }
+
+  .shop-catalog__item-description {
+    margin: 0;
+    margin-top: 5px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .shop-catalog__item-description--basket {
+    margin-top: 8px;
+  }
+
+  .shop-catalog__item-price {
+    margin: 0;
+
+    padding-top: 198px;
+    padding-left: 5px;
+    display: block;
+
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .shop-catalog__item-price--basket {
+    padding-top: 196px;
+    padding-left: 4px;
+  }
+
+  .shop-catalog__item-price--big_basket {
+    padding-top: 174px;
+    padding-left: 4px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .shop-catalog__header {
+    .desktop-header();
+
+    padding-top: 93px;
+    padding-left: 5px;
+    padding-bottom: 110px;
+    width: 1150px;
+  }
+
+  .shop-catalog__wrapper {
+    width: 1150px;
+  }
+
+  .shop-catalog__list {
+    padding-top: 122px;
+    padding-left: 49px;
+    width: 1050px;
+    flex-direction: row;
+  }
+
+  .shop-catalog__list-item {
+    width: 316px;
+  }
+
+  .shop-catalog__list-item:not(:nth-of-type(1)) {
+    margin: 0;
+    margin-left: 51px;
+  }
+
+  .shop-catalog__item {
+    flex-direction: column;
+  }
+
+  .shop-catalog__item-wrapper--rabbit {
+    padding-left: 28px;
+  }
+
+  .shop-catalog__item-description--basket {
+    margin-top: 5px;
+  }
+
+  .shop-catalog__item-image {
+    width: 316px;
+    height: 462px;
+  }
+
+  .shop-catalog__item-price {
+    padding-top: 61px;
+    padding-left: 0;
+  }
+
+  .shop-catalog__item-price--basket {
+    padding-top: 59px;
+  }
+
+  .shop-catalog__item-price--big_basket {
+    padding-top: 37px;
+  }
+}

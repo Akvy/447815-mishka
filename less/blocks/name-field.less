@@ -47,3 +47,72 @@
   border: none;
   border-bottom: 2px solid @black;
 }
+
+@media (min-width: @tablet-width) {
+  .name-field {
+    position: relative;
+
+    margin: 0;
+    margin-top: 100px;
+    padding: 0;
+    height: 240px;
+  }
+
+  .name-field__heading {
+    padding-top: 4px;
+    padding-left: 1px;
+  }
+
+  .name-field__list {
+    position: absolute;
+    top: 1px;
+    left: 166px;
+
+    padding: 0;
+    width: 510px;
+  }
+
+  .name-field__item {
+    padding-bottom: 38px;
+    flex-direction: row;
+  }
+
+  .name-field__input-heading {
+    margin-top: 1px;
+    margin-left: 2px;
+
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  .name-field__input {
+    margin: 0;
+    margin-left: 26px;
+    margin-right: 8px;
+    padding: 0;
+    padding-bottom: 14px;
+    padding-left: 17px;
+    width: 100%;
+
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .name-field__input--lastname,
+  .name-field__input--patronym {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .name-field__heading {
+    padding-top: 5px;
+    padding-left: 61px;
+  }
+
+  .name-field__list {
+    left: 175px;
+
+    width: 708px;
+  }
+}

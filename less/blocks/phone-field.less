@@ -30,3 +30,61 @@
 
   border: none;
 }
+
+@media (min-width: @tablet-width) {
+  .phone-field {
+    position: relative;
+    top: -7px;
+    left: -50px;
+
+    padding: 0;
+    margin: 0;
+    width: 768px;
+    height: 125px;
+
+    background-color: @light-gray;
+    border: none;
+  }
+
+  .phone-field__heading {
+    position: relative;
+    top: 75px;
+    left: 52px;
+  }
+
+  .phone-field__input {
+    position: relative;
+    bottom: -44px;
+    right: -217px;
+
+    padding: 0;
+    margin: 0;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    padding-right: 60px;
+    padding-top: 10px;
+    width: 425px;
+
+    font-size: 19px;
+    line-height: 18px;
+
+    background-color: inherit;
+    border-bottom: 2px solid @black;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .phone-field {
+    width: 1150px;
+  }
+
+  .phone-field__heading {
+    left: 113px;
+  }
+
+  .phone-field__input {
+    right: -225px;
+
+    width: 624px;
+  }
+}

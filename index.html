@@ -12,33 +12,47 @@
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин MISHKA">
         </a>
 
-        <nav class="main-nav">
+        <nav class="page-header__nav main-nav">
           <button type="button" class="main-nav__toggle">Открыть меню</button>
 
           <div class="main-nav__wrapper">
             <ul class="main-nav__list header-list">
               <li class="header-list__item">
-                <a href="catalog.html">Каталог товаров</a>
+                <a class="header-list__link" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="header-list__item">
-                <a href="form.html">Вязание на заказ</a>
+                <a class="header-list__link" href="form.html">Вязание на заказ</a>
               </li>
               <li class="header-list__item">
-                <a href="#">Поиск по сайту</a>
+                <a class="header-list__link" href="#">Поиск по сайту</a>
               </li>
               <li class="header-list__item">
-                <a href="#">Корзина: пока пуста</a>
+                <a class="header-list__link header-list__link--basket" href="#">Корзина: пока пуста</a>
               </li>
             </ul>
           </div>
         </nav> <!-- end main nav -->
+
+        <ul class="page-header__extra-list">
+          <li class="page-header__extra-item">
+            <a class="page-header__extra-link" href="#">Новые поступления</a>
+          </li>
+          <li class="page-header__extra-item">
+            <a class="page-header__extra-link" href="#">Распродажа</a>
+          </li>
+        </ul><!-- end header-list__extra-list -->
+
+        <span class="page-header__delivery-note">Бесплатная доставка по России</span>
       </div>
     </header> <!-- end header -->
 
     <main class="page-main">
       <section class="features">
         <div class="features__wrapper">
-          <h1 class="features__header">Милые штуки <br> ручной <br> работы для дома</h1>
+          <h1 class="features__header">
+            <span class="features__header-top">Милые штуки ручной</span>
+            <span class="features__header-bottom">работы для дома</span>
+          </h1>
 
           <ul class="features__list features-type-list">
             <li class="features-type-list__item">
@@ -55,28 +69,34 @@
 
       <section class="trending">
         <div class="trending__wrapper">
-          <h2 class="trending__header">Вязаные корзинки</h2>
+          <div class="trending__header-wrapper">
+            <h2 class="trending__header">Вязаные корзинки</h2>
 
-          <span class="trending__sub-header">Товар недели</span>
+            <span class="trending__sub-header">Товар недели</span>
+          </div>
 
-          <p class="trending__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <div class="trending__content-wrapper">
+            <div class="trending__description-wrapper">
+              <p class="trending__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 
-          <table class="trending__table">
-            <tr>
-              <td class="trending__table-class">Цвет:</td>
-              <td class="trending__table-value">«Тиффани»/серый</td>
-            </tr>
-            <tr>
-              <td class="trending__table-class">Диаметр:</td>
-              <td class="trending__table-value">25 см</td>
-            </tr>
-            <tr>
-              <td class="trending__table-class">Высота:</td>
-              <td class="trending__table-value">15 см</td>
-            </tr>
-          </table>
+              <table class="trending__table">
+                <tr>
+                  <td class="trending__table-class">Цвет:</td>
+                  <td class="trending__table-value">«Тиффани»/серый</td>
+                </tr>
+                <tr>
+                  <td class="trending__table-class">Диаметр:</td>
+                  <td class="trending__table-value">25 см</td>
+                </tr>
+                <tr>
+                  <td class="trending__table-class">Высота:</td>
+                  <td class="trending__table-value">15 см</td>
+                </tr>
+              </table>
+            </div>
 
-          <img class="trending__picture" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+            <img class="trending__picture" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+          </div>
 
           <div class="trending__price-wrapper">
             <span class="trending__price">Цена: 990 руб.</span>
@@ -91,23 +111,23 @@
           <h2 class="about-us__header">Коротко о нас:</h2>
 
           <ul class="about-us__list">
-            <li class="about-us__item about-us__item--flower">
-              <h3>Экологически чистые материалы</h3>
+            <li class="about-us__item">
+              <h3 class="about-us__heading about-us__heading--flower">Экологически чистые материалы</h3>
             </li>
-            <li class="about-us__item about-us__item--money">
-              <h3>Скандинавский стиль по российской цене</h3>
+            <li class="about-us__item">
+              <h3 class="about-us__heading about-us__heading--money">Скандинавский стиль по российской цене</h3>
             </li>
-            <li class="about-us__item about-us__item--heart">
-              <h3>Увеличивает лайки на фотографиях</h3>
+            <li class="about-us__item">
+              <h3 class="about-us__heading about-us__heading--heart">Увеличивает лайки на фотографиях</h3>
             </li>
-            <li class="about-us__item about-us__item--roll">
-              <h3>Связано вручную с любовью и умилением</h3>
+            <li class="about-us__item">
+              <h3 class="about-us__heading about-us__heading--roll">Связано вручную с любовью и умилением</h3>
             </li>
-            <li class="about-us__item about-us__item--rocket">
-              <h3>Поддержка отечественного производителя</h3>
+            <li class="about-us__item">
+              <h3 class="about-us__heading about-us__heading--rocket">Поддержка отечественного производителя</h3>
             </li>
-            <li class="about-us__item about-us__item--present">
-              <h3>Поставляется в подарочной упаковке</h3>
+            <li class="about-us__item">
+              <h3 class="about-us__heading about-us__heading--present">Поставляется в подарочной упаковке</h3>
             </li>
           </ul>
         </div>
@@ -120,9 +140,11 @@
           <p class="reviews__item">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 
           <div class="reviews__author-wrapper">
-            <b class="reviews__author">Анастасия Красильникова</b>
+            <div class="reviews__author-box">
+              <b class="reviews__author">Анастасия Красильникова</b>
 
-            <span class="reviews__author-mail">@misssssiskras</span>
+              <span class="reviews__author-mail">@misssssiskras</span>
+            </div>
 
             <p class="reviews__toggle-box">
               <button type="button" class="reviews__prev">Предыдущий</button>
@@ -145,7 +167,7 @@
             </tr>
             <tr class="contacts__table-row-2">
               <td class="contacts__table-class">адрес:</td>
-              <td class="contacts__table-value">г. Санкт-Петербург, ул. Большая Конюшенная, <br> д. 19/8, офис 101</td>
+              <td class="contacts__table-value contacts__table-value--adress">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</td>
             </tr>
           </table>
         </div>
@@ -154,7 +176,7 @@
           <div class="contacts__map">
             <span class="visually-hidden">Карта проезда</span>
 
-            <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта проезда">
+            <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта проезда">
           </div>
 
           <button type="button" class="contacts__button button">Напишите нам</button>
@@ -181,6 +203,11 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <ul class="main-footer__list">
+          <li class="main-footer__item footer-logo">
+            <a class="footer__logo-link" href="#">
+              <img class="main-footer__logo-image" src="#" alt="Интернет-магазин MISHKA" width="102" height="34">
+            </a>
+          </li>
           <li>
             <ul class="main-footer__item footer-social">
               <li class="footer-social__item footer-social__item--insta">
