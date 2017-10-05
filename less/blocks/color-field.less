@@ -33,3 +33,64 @@
 .color-field__color {
   .order-form-radio-checkbox-names();
 }
+
+@media (min-width:@tablet-width) {
+  .color-field {
+    position: relative;
+    top: 37px;
+    left: -49px;
+
+    width: @tablet-width;
+    margin: 0;
+    padding: 0;
+    height: 312px;
+
+    background-color: @light-gray;
+  }
+
+  .color-field__heading {
+    position: relative;
+    top: 75px;
+    left: 48px;
+  }
+
+  .color-field__list {
+    position: absolute;
+    top: 71px;
+    left: 197px;
+
+    padding: 0;
+    width: 530px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .color-field__option {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+  }
+
+  .color-field__option--tiffany,
+  .color-field__option--black,
+  .color-field__option--pink,
+  .color-field__option--orange {
+    padding-top: 52px;
+  }
+
+  .color-field__option--black,
+  .color-field__option--gray,
+  .color-field__option--orange {
+    margin-left: 12px;
+  }
+
+  .color-field__color {
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    font-size: 18px;
+    line-height: 19px;
+  }
+}

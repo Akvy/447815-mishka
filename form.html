@@ -12,26 +12,37 @@
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин MISHKA">
         </a>
 
-        <nav class="main-nav">
+        <nav class="page-header__nav main-nav">
           <button type="button" class="main-nav__toggle">Открыть меню</button>
 
           <div class="main-nav__wrapper">
-            <ul class="main-nav__list header-list">
-              <li class="header-list__item">
-                <a href="catalog.html">Каталог товаров</a>
+            <ul class="main-nav__list header-list header-list--inner">
+              <li class="header-list__item header-list__item--inner">
+                <a class="header-list__link" href="catalog.html">Каталог товаров</a>
               </li>
-              <li class="header-list__item">
-                <a>Вязание на заказ</a>
+              <li class="header-list__item header-list__item--inner">
+                <a class="header-list__link">Вязание на заказ</a>
               </li>
-              <li class="header-list__item">
-                <a href="#">Поиск по сайту</a>
+              <li class="header-list__item header-list__item--inner">
+                <a class="header-list__link" href="#">Поиск по сайту</a>
               </li>
-              <li class="header-list__item">
-                <a href="#">Корзина: пока пуста</a>
+              <li class="header-list__item header-list__item--inner">
+                <a class="header-list__link header-list__link--basket" href="#">Корзина: пока пуста</a>
               </li>
             </ul>
           </div>
         </nav> <!-- end main nav -->
+
+        <ul class="page-header__extra-list">
+          <li class="page-header__extra-item">
+            <a class="page-header__extra-link" href="#">Новые поступления</a>
+          </li>
+          <li class="page-header__extra-item">
+            <a class="page-header__extra-link" href="#">Распродажа</a>
+          </li>
+        </ul><!-- end header-list__extra-list -->
+
+        <span class="page-header__delivery-note">Бесплатная доставка по России</span>
       </div>
     </header> <!-- end header -->
 
@@ -63,27 +74,27 @@
               <legend class="color-field__heading">Цвет</legend>
 
               <ul class="color-field__list">
-                <li class="color-field__option">
+                <li class="color-field__option color-field__option--white">
                   <input class="visually-hidden" type="checkbox" id="checkbox-white" name="white" checked>
                   <label class="color-field__color" for="checkbox-white">Белый</label>
                 </li>
-                <li class="color-field__option">
+                <li class="color-field__option color-field__option--gray">
                   <input class="visually-hidden" type="checkbox" id="checkbox-gray" name="gray" checked>
                   <label class="color-field__color" for="checkbox-gray">Серый</label>
                 </li>
-                <li class="color-field__option">
+                <li class="color-field__option color-field__option--tiffany">
                   <input class="visually-hidden" type="checkbox" id="checkbox-tiffany" name="tiffany">
                   <label class="color-field__color" for="checkbox-tiffany">&laquo;Тиффани&raquo;</label>
                 </li>
-                <li class="color-field__option">
+                <li class="color-field__option color-field__option--black">
                   <input class="visually-hidden" type="checkbox" id="checkbox-black" name="black">
                   <label class="color-field__color" for="checkbox-black">Черный</label>
                 </li>
-                <li class="color-field__option">
+                <li class="color-field__option color-field__option--pink">
                   <input class="visually-hidden" id="checkbox-pink" type="checkbox" name="pink">
                   <label class="color-field__color" for="checkbox-pink">Розовый</label>
                 </li>
-                <li class="color-field__option">
+                <li class="color-field__option color-field__option--orange">
                   <input class="visually-hidden" id="checkbox-orange" type="checkbox" name="orange">
                   <label class="color-field__color" for="checkbox-orange">Оранжевый</label>
                 </li>
@@ -102,12 +113,12 @@
                 <li class="name-field__item">
                   <label for="lastname" class="name-field__input-heading">Фамилия:</label>
 
-                  <input class="name-field__input" type="text" name="lastname" id="lastname" placeholder="Укажите фамилию*">
+                  <input class="name-field__input name-field__input--lastname" type="text" name="lastname" id="lastname" placeholder="Укажите фамилию*">
                 </li>
                 <li class="name-field__item">
                   <label for="patronym" class="name-field__input-heading">Отчество:</label>
 
-                  <input class="name-field__input" type="text" name="patronym" id="patronym" placeholder="Отчество, если желаете">
+                  <input class="name-field__input name-field__input--patronym" type="text" name="patronym" id="patronym" placeholder="Отчество, если желаете">
                 </li>
               </ul>
             </fieldset> <!-- end name-field -->
@@ -140,7 +151,7 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <ul class="main-footer__list">
+        <ul class="main-footer__list main-footer__list--form">
           <li>
             <ul class="main-footer__item footer-social">
               <li class="footer-social__item footer-social__item--insta">

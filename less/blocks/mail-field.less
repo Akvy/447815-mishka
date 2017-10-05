@@ -30,3 +30,45 @@
 
   border: none;
 }
+
+@media (min-width:@tablet-width) {
+  .mail-field {
+    position: relative;
+    top: -15px;
+    left: -50px;
+
+    padding: 0;
+    margin: 0;
+    width: 768px;
+    height: 119px;
+
+    background-color: @light-gray;
+    border: none;
+  }
+
+  .mail-field__heading {
+    position: relative;
+    top: 34px;
+    left: 52px;
+  }
+
+  .mail-field__input {
+    position: relative;
+    bottom: -4px;
+    right: -217px;
+
+    padding: 0;
+    margin: 0;
+    padding-left: 16px;
+    padding-bottom: 15px;
+    padding-right: 60px;
+    padding-top: 10px;
+    width: 425px;
+
+    font-size: 19px;
+    line-height: 18px;
+
+    background-color: inherit;
+    border-bottom: 2px solid @black;
+  }
+}
