@@ -1,5 +1,22 @@
 .order-page__header {
   .inner-page-header();
+
+  @media (min-width: @tablet-width) {
+    .tablet-header();
+
+    width: @tablet-width;
+    padding-top: 36px;
+    padding-bottom: 90px;
+    padding-left: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-header();
+
+    padding-top: 93px;
+    padding-bottom: 110px;
+    width: 1150px;
+  }
 }
 
 .order-page__wrapper {
@@ -7,12 +24,43 @@
 
   padding: 30px;
   padding-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding-top: 64px;
+    padding-left: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
 }
 
 .order-page__description {
   margin: 0;
 
   font-size: 13px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 20px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 51px;
+    margin-left: 175px;
+    padding-right: 170px;
+  }
+}
+
+.order-page__form {
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    margin-top: 40px;
+  }
 }
 
 .order-page__button {
@@ -22,38 +70,8 @@
   padding: 45px;
   padding-top: 15px;
   padding-bottom: 13px;
-}
 
-@media (min-width: @tablet-width) {
-  .order-page__header {
-    .tablet-header();
-
-    width: @tablet-width;
-    padding-top: 36px;
-    padding-bottom: 90px;
-    padding-left: 2px;
-  }
-
-  .order-page__wrapper {
-    width: @tablet-width;
-    padding-top: 64px;
-    padding-left: 50px;
-  }
-
-  .order-page__description {
-    padding-right: 20px;
-
-    font-size: 17px;
-    line-height: 30px;
-  }
-
-  .order-page__form {
-    position: relative;
-
-    margin-top: 40px;
-  }
-
-  .order-page__button {
+  @media (min-width: @tablet-width) {
     position: absolute;
     bottom: -12px;
     left: 0;
@@ -62,28 +80,8 @@
     padding-left: 28px;
     padding-right: 32px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .order-page__header {
-    .desktop-header();
-
-    padding-top: 93px;
-    padding-bottom: 110px;
-    width: 1150px;
-  }
-
-  .order-page__wrapper {
-    width: 1150px;
-  }
-
-  .order-page__description {
-    margin-top: 51px;
-    margin-left: 175px;
-    padding-right: 170px;
-  }
-
-  .order-page__button {
+  @media (min-width: @desktop-width) {
     bottom: -11px;
     left: 175px;
   }

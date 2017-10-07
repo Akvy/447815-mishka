@@ -3,49 +3,8 @@
 
   padding-top: 39px;
   padding-left: 28px;
-}
 
-.about-us__header {
-  .lesser-header();
-}
-
-.about-us__list {
-  .basic-list-reseter();
-}
-
-.about-us__item {
-  padding-right: 50px;
-
-  letter-spacing: 0.2px;
-
-  &:nth-of-type(1) {
-    padding-right: 100px;
-  }
-
-  &:nth-of-type(3) {
-    padding-right: 100px;
-  }
-
-  &:nth-of-type(2) {
-    padding-right: 70px;
-  }
-
-  &:nth-of-type(5) {
-    padding-right: 30px;
-  }
-}
-
-.about-us__heading {
-  margin: 0;
-  padding-top: 84px;
-
-  font-size: 17px;
-  color: @black;
-  line-height: 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .about-us__wrapper {
+  @media (min-width: @tablet-width) {
     width: @tablet-width;
 
     padding-top: 80px;
@@ -53,13 +12,32 @@
     padding-right: 50px;
   }
 
-  .about-us__header {
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.about-us__header {
+  .lesser-header();
+
+  @media (min-width: @tablet-width) {
     .tablet-header();
 
     margin-top: 39px;
   }
 
-  .about-us__list {
+  @media (min-width: @desktop-width) {
+    .desktop-header();
+
+    margin-top: 75px;
+    margin-left: 224px;
+  }
+}
+
+.about-us__list {
+  .basic-list-reseter();
+
+  @media (min-width: @tablet-width) {
     margin-left: 4px;
     height: 470px;
     display: flex;
@@ -68,76 +46,120 @@
     justify-content: flex-start;
   }
 
-  .about-us__item {
+  @media (min-width: @desktop-width) {
+    margin-top: 1px;
+    margin-left: 228px;
+    width: 700px;
+  }
+}
+
+.about-us__item {
+  padding-right: 50px;
+
+  letter-spacing: 0.2px;
+
+  @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0;
     width: 50%;
+  }
+}
 
-    &:nth-of-type(1),
-    &:nth-of-type(2),
-    &:nth-of-type(3),
-    &:nth-of-type(5) {
-      padding-right: 0;
-    }
+.about-us__item:nth-of-type(1) {
+  padding-right: 100px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+  }
+}
+
+.about-us__item:nth-of-type(3) {
+  padding-right: 100px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+  }
+}
+
+.about-us__item:nth-of-type(2) {
+  padding-right: 85px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+  }
+}
+
+.about-us__item:nth-of-type(5) {
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+  }
+}
+
+.about-us__heading {
+  margin: 0;
+  padding-top: 83px;
+
+  font-size: 17px;
+  color: @black;
+  line-height: 20px;
+
+  &--flower {
+    padding-top: 86px;
   }
 
-  .about-us__heading {
+  &--roll {
+    margin-left: 1px;
+  }
+
+  &--rocket,
+  &--present {
+    margin-left: 2px;
+  }
+
+
+
+  @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0;
     padding-top: 111px;
 
     font-size: 20px;
     line-height: 22px;
+
+    &--flower,
+    &--roll {
+      padding-top: 102px;
+      padding-right: 100px;
+    }
+
+    &--roll,
+    &--money {
+      padding-right: 80px;
+    }
+
+    &--heart {
+      padding-right: 90px;
+    }
+
+    &--present {
+      padding-right: 40px;
+    }
   }
 
-  .about-us__heading--flower,
-  .about-us__heading--roll {
-    padding-top: 102px;
-    padding-right: 100px;
-  }
+  @media (min-width: @desktop-width) {
+    &--flower,
+    &--heart {
+      padding-right: 120px;
+    }
 
-  .about-us__heading--roll,
-  .about-us__heading--money {
-    padding-right: 80px;
-  }
+    &--money {
+      padding-right: 90px;
+    }
 
-  .about-us__heading--heart {
-    padding-right: 90px;
-  }
-
-  .about-us__heading--present {
-    padding-right: 40px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .about-us__wrapper {
-    width: @desktop-width;
-  }
-
-  .about-us__header {
-    .desktop-header();
-
-    margin-top: 75px;
-    margin-left: 224px;
-  }
-
-  .about-us__list {
-    margin-top: 1px;
-    margin-left: 228px;
-    width: 700px;
-  }
-
-  .about-us__heading--flower,
-  .about-us__heading--heart {
-    padding-right: 120px;
-  }
-
-  .about-us__heading--money {
-    padding-right: 90px;
-  }
-
-  .about-us__heading--present {
-    padding-right: 50px;
+    &--present {
+      padding-right: 50px;
+    }
   }
 }

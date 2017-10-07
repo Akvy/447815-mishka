@@ -7,32 +7,8 @@
 
   border: none;
   border-bottom: 2px solid @black;
-}
 
-.mail-field__heading {
-  margin-left: -3px;
-
-  font-size: 17px;
-  line-height: 16px;
-  color: @light-teal;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.mail-field__input {
-  margin-top: 15px;
-  margin-left: -3px;
-  padding-bottom: 16px;
-
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: 100;
-
-  border: none;
-}
-
-@media (min-width: @tablet-width) {
-  .mail-field {
+  @media (min-width: @tablet-width) {
     position: relative;
     top: -15px;
     left: -50px;
@@ -46,13 +22,44 @@
     border: none;
   }
 
-  .mail-field__heading {
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
+}
+
+.mail-field__heading {
+  margin-left: -3px;
+
+  font-size: 17px;
+  line-height: 16px;
+  color: @light-teal;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
     position: relative;
     top: 34px;
     left: 52px;
   }
 
-  .mail-field__input {
+  @media (min-width: @desktop-width) {
+    top: 36px;
+    left: 112px;
+  }
+}
+
+.mail-field__input {
+  margin-top: 15px;
+  margin-left: -3px;
+  padding-bottom: 16px;
+
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 100;
+
+  border: none;
+
+  @media (min-width: @tablet-width) {
     position: relative;
     bottom: -4px;
     right: -217px;
@@ -71,19 +78,8 @@
     background-color: inherit;
     border-bottom: 2px solid @black;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .mail-field {
-    width: 1150px;
-  }
-
-  .mail-field__heading {
-    top: 36px;
-    left: 112px;
-  }
-
-  .mail-field__input {
+  @media (min-width: @desktop-width) {
     right: -225px;
 
     width: 624px;

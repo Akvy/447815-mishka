@@ -1,5 +1,14 @@
 .main-nav {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .main-nav__toggle {
@@ -9,10 +18,18 @@
   z-index: 2;
 
   padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__wrapper {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .main-nav__toggle:hover ~ .main-nav__wrapper,
@@ -23,31 +40,8 @@
   top: 59px;
 
   display: block;
-}
 
-@media (min-width: @tablet-width) {
-  .main-nav {
-    margin-left: 0;
-    width: @tablet-width;
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__wrapper {
-    display: block;
-  }
-
-  .main-nav__toggle:hover ~ .main-nav__wrapper,
-  .main-nav__toggle:active ~ .main-nav__wrapper,
-  .main-nav__wrapper:hover {
+  @media (min-width: @tablet-width) {
     position: static;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav {
-    width: @desktop-width;
   }
 }

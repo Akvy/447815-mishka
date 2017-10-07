@@ -4,38 +4,8 @@
   margin-left: -3px;
 
   border: none;
-}
 
-.color-field__heading {
-  font-size: 17px;
-  line-height: 16px;
-  color: @light-teal;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.color-field__list {
-  .basic-list-reseter();
-
-  padding-top: 28px;
-}
-
-.color-field__option {
-  padding-left: 65px;
-
-  margin-bottom: 37px;
-
-  &:last-of-type {
-    margin-bottom: 4px;
-  }
-}
-
-.color-field__color {
-  .order-form-radio-checkbox-names();
-}
-
-@media (min-width: @tablet-width) {
-  .color-field {
+  @media (min-width: @tablet-width) {
     position: relative;
     top: 37px;
     left: -49px;
@@ -48,13 +18,37 @@
     background-color: @light-gray;
   }
 
-  .color-field__heading {
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    height: 235px;
+  }
+}
+
+.color-field__heading {
+  font-size: 17px;
+  line-height: 16px;
+  color: @light-teal;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
     position: relative;
     top: 75px;
     left: 48px;
   }
 
-  .color-field__list {
+  @media (min-width: @desktop-width) {
+    top: 74px;
+    left: 107px;
+  }
+}
+
+.color-field__list {
+  .basic-list-reseter();
+
+  padding-top: 28px;
+
+  @media (min-width: @tablet-width) {
     position: absolute;
     top: 71px;
     left: 197px;
@@ -66,47 +60,7 @@
     flex-wrap: wrap;
   }
 
-  .color-field__option {
-    margin: 0;
-    padding: 0;
-    width: 250px;
-  }
-
-  .color-field__option--tiffany,
-  .color-field__option--black,
-  .color-field__option--pink,
-  .color-field__option--orange {
-    padding-top: 52px;
-  }
-
-  .color-field__option--black,
-  .color-field__option--gray,
-  .color-field__option--orange {
-    margin-left: 12px;
-  }
-
-  .color-field__color {
-    padding-left: 100px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    font-size: 18px;
-    line-height: 19px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .color-field {
-    width: 1150px;
-    height: 235px;
-  }
-
-  .color-field__heading {
-    top: 74px;
-    left: 107px;
-  }
-
-  .color-field__list {
+  @media (min-width: @desktop-width) {
     top: 51px;
     left: 205px;
     padding-top: 19px;
@@ -114,34 +68,76 @@
     width: 900px;
     height: 180px;
   }
+}
 
-  .color-field__option {
-    height: 50px;
-  }
+.color-field__option {
+  padding-left: 65px;
 
-  .color-field__option--tiffany,
-  .color-field__option--black,
-  .color-field__option--pink,
-  .color-field__option--orange {
-    padding-top: 0;
-  }
+  margin-bottom: 37px;
 
-  .color-field__option--black,
-  .color-field__option--pink,
-  .color-field__option--orange {
+  @media (min-width: @tablet-width) {
     margin: 0;
-    margin-top: -23px;
+    padding: 0;
+    width: 250px;
+
+    &--tiffany,
+    &--black,
+    &--pink,
+    &--orange {
+      padding-top: 52px;
+    }
+
+    &--black,
+    &--gray,
+    &--orange {
+      margin-left: 12px;
+    }
   }
 
-  .color-field__option--pink {
-    margin-left: 12px;
-  }
+  @media (min-width: @desktop-width) {
+    height: 50px;
 
-  .color-filed__option--tiffany {
-    margin-left: 15px;
-  }
+    &--tiffany {
+      margin-left: 15px;
+    }
 
-  .color-field__option--orange {
-    margin-left: 14px;
+    &--tiffany,
+    &--black,
+    &--pink,
+    &--orange {
+      padding-top: 0;
+    }
+
+    &--black,
+    &--pink,
+    &--orange {
+      margin: 0;
+      margin-top: -23px;
+    }
+
+    &--pink {
+      margin-left: 12px;
+    }
+
+    &--orange {
+      margin-left: 14px;
+    }
+  }
+}
+
+.color-field__option:last-of-type {
+  margin-bottom: 4px;
+}
+
+.color-field__color {
+  .order-form-radio-checkbox-names();
+
+  @media (min-width: @tablet-width) {
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    font-size: 18px;
+    line-height: 19px;
   }
 }
