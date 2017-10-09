@@ -95,6 +95,8 @@
 }
 
 .trending__description-wrapper {
+  min-width: 260px;
+
   @media (min-width: @tablet-width) {
     width: 338px;
   }
@@ -141,6 +143,7 @@
 }
 
 .trending__table {
+  width: 260px;
   margin-bottom: 29px;
 
   border-collapse: collapse;
@@ -158,32 +161,19 @@
 .trending__table-row {
   position: relative;
 
-  &::after {
-    position: absolute;
-    bottom: -186px;
-    left: 250px;
-
-    content: "";
-    width: 262px;
-    height: 1px;
-
-    background-color: @light-gray;
-  }
-
-  &--2::after {
-    bottom: -226px;
-  }
-
-  &--3::after {
-    bottom: -266px;
-  }
+  border-bottom: 1px solid @light-gray;
 
   @media (min-width: @tablet-width) {
+    border-bottom: none;
+
     &::after {
+      position: absolute;
       bottom: 246px;
       left: 50px;
 
+      content: "";
       width: 291px;
+      height: 1px;
 
       background-color: @light-gray;
     }
@@ -223,10 +213,10 @@
 }
 
 .trending__table-value {
-  padding-left: 20px;
+  padding-left: 10px;
 
-  @media (min-width: @tablet-width) {
-    padding-left: 18px;
+  @media (min-width: @desktop-width) {
+    padding-left: 12px;
   }
 }
 
