@@ -12,3 +12,13 @@ navToggle.addEventListener('click', function() {
     navToggle.classList.remove('main-nav__toggle--opened');
   }
 });
+
+
+// window.addEventListener("keydown", function(evt) {
+//   if (evt.keyCode === 27) {
+//     if (navToggle.classList.contains("main-nav__toggle--opened")) {
+//       navToggle.classList.remove("main-nav__toggle--opened");
+//       navToggle.classList.add("main-nav__toggle--closed");
+//     }
+//   }
+// }

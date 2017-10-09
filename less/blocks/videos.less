@@ -3,33 +3,56 @@
 
   padding: 30px;
   padding-top: 0;
-  margin-top: -4px;
-  margin-bottom: 61px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 58px;
+  width: 260px;
+
+  border: 1px solid @gray;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
+    width: 668px;
     margin-top: 25px;
-    padding-left: 50px;
-    margin-bottom: 79px;
+    margin-bottom: 63px;
+    padding: 0;
+    padding-bottom: 45px;
     display: flex;
     flex-direction: column;
+
+    &:hover {
+      .opacity-hover();
+
+      box-shadow: 3px 6px 10px 0px @opa-black;
+    }
+
+    &:active {
+      .opacity-active();
+
+      box-shadow: 0px 3px 5px 0px @opa-black;
+    }
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
 
-    width: 1150px;
-    margin-top: 55px;
-    margin-bottom: 76px;
-    padding-right: 50px;
+    width: 1048px;
+    margin-top: 29px;
+    margin-bottom: 106px;
+    padding-bottom: 0;
   }
 }
 
 .videos__video {
+  position: relative;
+  top: 0;
+  left: -1px;
+
   @media (min-width: @tablet-width) {
     order: 0;
     width: 668px;
-    height: 455px;
+    height: 453px;
   }
 
   @media (min-width: @desktop-width) {
@@ -38,32 +61,37 @@
 }
 
 .videos__header {
-  padding-left: 90px;
+  padding-top: 23px;
+  padding-left: 89px;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 
   font-size: 17px;
   color: @black;
 
   @media (min-width: @tablet-width) {
-    margin-top: 39px;
     margin-bottom: 0;
-    padding-left: 106px;
+    padding-top: 39px;
+    padding-left: 105px;
     order: 1;
 
     font-size: 20px;
     line-height: 24px;
+
+    border-top: 1px solid @gray;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 27px;
-    right: 180px;
+    top: 25px;
+    right: 128px;
 
     padding: 0;
     padding-top: 70px;
     margin: 0;
     width: 160px;
+
+    border-top: none;
   }
 }
 
@@ -78,7 +106,7 @@
     margin: 0;
     margin-top: 32px;
     margin-left: 40px;
-    padding-right: 60px;
+    padding-right: 40px;
     order: 2;
 
     font-size: 15px;
@@ -87,8 +115,8 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 146px;
-    right: 50px;
+    top: 144px;
+    right: 18px;
 
     width: 230px;
   }
@@ -108,14 +136,14 @@
     margin: 0;
     margin-top: 35px;
     margin-left: 42px;
-    margin-right: 62px;
+    margin-right: 41px;
     order: 3;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    bottom: 89px;
-    right: 108px;
+    bottom: 59px;
+    right: 56px;
 
     margin: 0;
     padding-left: 41px;

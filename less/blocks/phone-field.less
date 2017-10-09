@@ -28,6 +28,8 @@
 }
 
 .phone-field__heading {
+  position: relative;
+
   margin-left: -3px;
 
   font-size: 17px;
@@ -36,10 +38,26 @@
   text-transform: uppercase;
   font-weight: 700;
 
+  &::after {
+    position: absolute;
+    top: 7px;
+    left: 64px;
+
+    content: "";
+    width: 200px;
+    height: 1px;
+
+    background-color: @light-teal;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
     top: 75px;
     left: 52px;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -57,6 +75,8 @@
   font-weight: 100;
 
   border: none;
+
+  outline: none;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -83,4 +103,15 @@
 
     width: 624px;
   }
+}
+
+.phone-field__input[placeholder]:hover {
+  opacity: 0.3;
+  border-color: @light-teal;
+}
+
+.phone-field__input[placeholder]:active,
+.phone-field__input[placeholder]:focus {
+  opacity: 1;
+  border-color: @light-teal;
 }

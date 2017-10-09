@@ -141,6 +141,40 @@
   }
 }
 
+.contacts__table-email {
+  position: relative;
+
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: @teal;
+  }
+
+  &:active {
+    .opacity-active();
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -6px;
+    left: 0px;
+
+    content: "";
+
+    width: 100%;
+    height: 1px;
+
+    background-color: @teal;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      bottom: -4px;
+    }
+  }
+}
+
 .contacts__map-wrapper {
   .mobile-container();
 

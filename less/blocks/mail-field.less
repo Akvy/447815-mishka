@@ -28,6 +28,8 @@
 }
 
 .mail-field__heading {
+  position: relative;
+
   margin-left: -3px;
 
   font-size: 17px;
@@ -36,10 +38,26 @@
   text-transform: uppercase;
   font-weight: 700;
 
+  &::after {
+    position: absolute;
+    top: 7px;
+    left: 84px;
+
+    content: "";
+    width: 179px;
+    height: 1px;
+
+    background-color: @light-teal;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
     top: 34px;
     left: 52px;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -58,6 +76,8 @@
   font-weight: 100;
 
   border: none;
+
+  outline: none;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -84,4 +104,15 @@
 
     width: 624px;
   }
+}
+
+.mail-field__input[placeholder]:hover {
+  opacity: 0.3;
+  border-color: @light-teal;
+}
+
+.mail-field__input[placeholder]:active,
+.mail-field__input[placeholder]:focus {
+  opacity: 1;
+  border-color: @light-teal;
 }

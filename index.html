@@ -19,17 +19,17 @@
 
           <div class="main-nav__wrapper">
             <ul class="main-nav__list header-list">
-              <li class="header-list__item">
+              <li class="header-list__item header-list__item-catalog">
                 <a class="header-list__link" href="catalog.html">Каталог товаров</a>
               </li>
-              <li class="header-list__item">
+              <li class="header-list__item header-list__item-form">
                 <a class="header-list__link" href="form.html">Вязание на заказ</a>
               </li>
-              <li class="header-list__item">
+              <li class="header-list__item header-list__item-search">
                 <a class="header-list__link" href="#">Поиск по сайту</a>
               </li>
-              <li class="header-list__item">
-                <a class="header-list__link header-list__link--basket" href="#">Корзина: пока пуста</a>
+              <li class="header-list__item header-list__item-basket">
+                <a class="header-list__link header-list__link-basket" href="#">Корзина: пока пуста</a>
               </li>
             </ul>
           </div>
@@ -58,8 +58,7 @@
 
           <ul class="features__list features-type-list">
             <li class="features-type-list__item">
-              <a class="features-type-list__link" href="#">Предметы
-интерьера</a>
+              <a class="features-type-list__link" href="#">Предметы <br> интерьера</a>
             </li>
             <li class="features-type-list__item">
               <a class="features-type-list__link" href="#">Детские
@@ -82,15 +81,15 @@
               <p class="trending__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 
               <table class="trending__table">
-                <tr>
+                <tr class="trending__table-row trending__table-row--1">
                   <td class="trending__table-class">Цвет:</td>
                   <td class="trending__table-value">«Тиффани»/серый</td>
                 </tr>
-                <tr>
+                <tr class="trending__table-row trending__table-row--2">
                   <td class="trending__table-class">Диаметр:</td>
                   <td class="trending__table-value">25 см</td>
                 </tr>
-                <tr>
+                <tr class="trending__table-row trending__table-row--3">
                   <td class="trending__table-class">Высота:</td>
                   <td class="trending__table-value">15 см</td>
                 </tr>
@@ -103,7 +102,9 @@
           <div class="trending__price-wrapper">
             <span class="trending__price">Цена: 990 руб.</span>
 
-            <button type="button" class="trending__button button">Заказать</button>
+            <button type="button" class="trending__button button">
+              <span>Заказать</span>
+            </button>
           </div>
         </div>
       </section> <!-- end trending -->
@@ -153,7 +154,9 @@
               <button type="button" class="reviews__next">Следующий</button>
             </p>
 
-            <button type="button" class="reviews__button button">Написать</button>
+            <button type="button" class="reviews__button button">
+              <span>Написать</span>
+            </button>
           </div>
         </div>
       </section> <!-- end reviews -->
@@ -165,7 +168,9 @@
           <table class="contacts__table">
             <tr class="contacts__table-row-1">
               <td class="contacts__table-class">e-mail:</td>
-              <td class="contacts__table-value contacts__table-value--underlined">info@mimimishkashop.ru</td>
+              <td class="contacts__table-value">
+                <a class="contacts__table-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </td>
             </tr>
             <tr class="contacts__table-row-2">
               <td class="contacts__table-class contacts__table-class--adress">адрес:</td>
@@ -181,7 +186,9 @@
             <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта проезда">
           </div>
 
-          <button type="button" class="contacts__button button">Напишите нам</button>
+          <button type="button" class="contacts__button button">
+            <span>Напишите нам</span>
+          </button>
         </div>
       </section> <!-- end contacts -->
 

@@ -25,16 +25,34 @@
 }
 
 .color-field__heading {
+  position: relative;
+
   font-size: 17px;
   line-height: 16px;
   color: @light-teal;
   text-transform: uppercase;
   font-weight: 700;
 
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 64px;
+
+    content: "";
+    width: 200px;
+    height: 1px;
+
+    background-color: @light-teal;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
     top: 75px;
     left: 48px;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {

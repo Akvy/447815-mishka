@@ -2,26 +2,35 @@
   .basic-list-reseter();
 
   @media (min-width: @tablet-width) {
-    margin-top: 70px;
+    margin-top: 26px;
+    height: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 
     background-color: @lighter-gray;
+    background-image: linear-gradient(@white 42px, @lighter-gray 42px);
 
     &--inner {
-      margin-top: 69px;
-
       background-color: @light-gray;
+      background-image: linear-gradient(@white 42px, @light-gray 42px);
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 31px;
-    margin-left: 98px;
     width: @desktop-width;
 
     background-color: @white;
+    background-image: none;
+
+    &--inner {
+      margin-left: 50px;
+      margin-right: 50px;
+      width: 1150px;
+
+      background-image: none;
+    }
   }
 }
 
@@ -40,32 +49,39 @@
 
   @media (min-width: @tablet-width) {
     width: 185px;
-    padding: 16px;
+    padding-top: 60px;
+    padding-bottom: 16px;
     padding-left: 32px;
     padding-right: 0;
     margin: 0;
+    margin-bottom: 58px;
 
     background-color: @lighter-gray;
+    background-image: linear-gradient(@white 42px, @lighter-gray 42px);
     border: none;
 
     &--inner {
-      padding-top: 17px;
-
       background-color: @light-gray;
+      background-image: linear-gradient(@white 42px, @light-gray 42px);
     }
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-left: 25px;
     padding: 0;
+    padding-left: 25px;
     width: 195px;
 
     background-color: @white;
+    background-image: linear-gradient(@white 57px, @lighter-gray 57px);
+
+    &--inner {
+      background-image: linear-gradient(@white 57px, @light-gray 57px);
+    }
   }
 }
 
-.header-list__item:first-of-type {
+.header-list__item-catalog {
   border-top: 1px solid @gray;
 
   @media (min-width: @tablet-width) {
@@ -77,6 +93,19 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
+    padding-left: 98px;
+    width: 294px;
+  }
+}
+
+.header-list__item--inner:first-of-type {
+  @media (min-width: @tablet-width) {
+    padding-left: 48px;
+    width: 185px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
   }
 }
 
@@ -85,37 +114,46 @@
   @media (min-width: @tablet-width) {
     margin-top: -74px;
 
-    background-image: linear-gradient(@white 74px, @lighter-gray 74px);
+    background-image: linear-gradient(@white 117px, @lighter-gray 117px);
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
 
-    background-image: none;
+    background-image: linear-gradient(@white 58px, @lighter-gray 58px);
   }
 }
 
 .header-list__inner-item:nth-of-type(3),
 .header-list__inner-item:nth-of-type(4) {
-  background-image: linear-gradient(@white 74px, @light-gray 74px);
+  background-image: linear-gradient(@white 117px, @light-gray 117px);
 
   @media (min-width: @desktop-width) {
-    background-image: none;
+    background-image: linear-gradient(@white 58px, @light-gray 58px);
   }
 }
 
 .header-list__item:nth-of-type(3) {
   @media (min-width: @tablet-width) {
-    width: 120px;
+    width: 80px;
+    margin-bottom: 58px;
 
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+
+    border-left: 1px solid @light-gray;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 270px;
+    position: relative;
+
+    margin-bottom: 0;
+    padding-left: 270px;
+    width: 390px;
+
+    border: none;
   }
 }
 
@@ -123,17 +161,24 @@
   @media (min-width: @tablet-width) {
     margin-top: -75px;
     margin-left: -14px;
-    padding-left: 60px;
-    width: 245px;
+    padding-left: 100px;
+    width: 305px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding-left: 62px;
-    width: 280px;
+    padding-left: 87px;
+    width: 371px;
   }
 }
 
+.header-list__item--inner:nth-of-type(4) {
+  width: 321px;
+
+  @media (min-width: @desktop-width) {
+    width: 320px;
+  }
+}
 
 .header-list__link {
   font-family: "Myriad Pro";
@@ -148,6 +193,14 @@
     font-size: 15px;
     font-weight: 700;
 
+    &[href]:hover {
+      .opacity-hover()
+    }
+
+    &[href]:active {
+      .opacity-active()
+    }
+
     &--basket {
       font-size: 16px;
       letter-spacing: 0.6px;
@@ -157,6 +210,14 @@
   @media (min-width: @desktop-width) {
     font-size: 17px;
     line-height: 24px;
+
+    &[href]:hover {
+      .opacity-hover()
+    }
+
+    &[href]:active {
+      .opacity-active()
+    }
 
     &--form {
       position: relative;

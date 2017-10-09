@@ -18,15 +18,33 @@
 }
 
 .name-field__heading {
+  position: relative;
+
   font-size: 17px;
   line-height: 16px;
   color: @light-teal;
   text-transform: uppercase;
   font-weight: 700;
 
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 64px;
+
+    content: "";
+    width: 200px;
+    height: 1px;
+
+    background-color: @light-teal;
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 4px;
     padding-left: 1px;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -94,6 +112,8 @@
   border: none;
   border-bottom: 2px solid @black;
 
+  outline: none;
+
   @media (min-width: @tablet-width) {
     margin: 0;
     margin-left: 26px;
@@ -111,4 +131,15 @@
       margin-left: 30px;
     }
   }
+}
+
+.name-field__input[placeholder]:hover {
+  opacity: 0.3;
+  border-color: @light-teal;
+}
+
+.name-field__input[placeholder]:active,
+.name-field__input[placeholder]:focus {
+  opacity: 1;
+  border-color: @light-teal;
 }
