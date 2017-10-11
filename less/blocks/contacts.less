@@ -9,6 +9,8 @@
 .contacts__wrapper {
   .mobile-container();
 
+  position: relative;
+
   padding: 28px;
   padding-top: 58px;
 
@@ -42,6 +44,24 @@
 
     margin-top: 118px;
     margin-left: 241px;
+  }
+}
+
+.contacts__flag {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 129px;
+    right: 53px;
+
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 168px;
+    left: 163px;
+    right: auto;
   }
 }
 

@@ -8,7 +8,7 @@
   @media (min-width: @tablet-width) {
     position: relative;
 
-    margin-top: 74px;
+    margin-top: 44px;
     height: 100px;
   }
 }
@@ -35,6 +35,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    top: 30px;
+    left: 0;
+
     padding-left: 4px;
 
     &::after {
@@ -50,8 +53,8 @@
 .type-field__list {
   .basic-list-reseter();
 
-  margin-top: 25px;
-  padding-left: 66px;
+  margin-top: 1px;
+  padding-left: 0;
 
   line-height: 20px;
 
@@ -70,26 +73,99 @@
   }
 }
 
+.type-field__item {
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+  }
+}
+
 .type-field__item:nth-of-type(2) {
-  margin-top: 20px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-top: 30px;
-    padding-top: 26px;
+    margin-bottom: 9px;
   }
 }
 
 .type-field__radio {
   .order-form-radio-checkbox-names();
 
+  position: relative;
+
+  display: inline-block;
+  padding-left: 66px;
+
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: 3px;
+
+    content: "";
+    width: 35px;
+    height: 35px;
+
+    background-color: @white;
+    border: 2px solid @asphalt;
+    border-radius: 50%;
+  }
+
   @media (min-width: @tablet-width) {
-    padding-left: 120px;
+    padding-left: 80px;
     padding-top: 30px;
     padding-bottom: 30px;
 
     font-size: 18px;
     line-height: 19px;
+
+    &::before {
+      top: 14px;
+      left: 0;
+
+      width: 46px;
+      height: 46px;
+    }
   }
+}
+
+.type-field__radio:last-of-type {
+  padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 28px;
+  }
+}
+
+.type-field__input:checked ~ .type-field__radio::before {
+  background-color: @lighter-teal;
+  border: 2px solid @asphalt;
+  box-shadow: inset 0px 0px 0px 10px @white;
+
+  @media (min-width: @tablet-width) {
+    box-shadow: inset 0px 0px 0px 13px @white;
+  }
+}
+
+.type-field__input:hover ~ .type-field__radio::before {
+  border-color: @lighter-teal;
+}
+
+.type-field__input:active ~ .type-field__radio::before {
+  background-color: @lighter-teal;
+  border-color: @asphalt;
+  box-shadow: inset 0px 0px 0px 10px @white;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    box-shadow: inset 0px 0px 0px 13px @white;
+  }
+}
+
+.type-field__input:checked:active ~ .type-field__radio::before {
+  background-color: @white;
+  border: 2px solid @asphalt;
+  opacity: 0.3;
 }

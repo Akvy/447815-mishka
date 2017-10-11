@@ -17,7 +17,7 @@
   @media (min-width: @desktop-width) {
     position: relative;
 
-    margin-right: 16px;
+    margin-right: 12px;
     width: @desktop-width;
   }
 }
@@ -144,12 +144,13 @@
 
 .trending__table {
   width: 260px;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 
   border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
     margin-top: 35px;
+    margin-bottom: 29px;
     margin-left: 4px;
   }
 
@@ -212,8 +213,24 @@
   line-height: 20px;
 }
 
+.trending__table-class {
+  &--row-2,
+  &--row-3 {
+    padding-top: 9px;
+  }
+}
+
 .trending__table-value {
   padding-left: 10px;
+
+  &--row-2,
+  &--row-3 {
+    padding-top: 9px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-left: 12px;

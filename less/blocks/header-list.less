@@ -133,6 +133,10 @@
 }
 
 .header-list__item-search {
+  position: relative;
+
+  padding-left: 30px;
+
   @media (min-width: @tablet-width) {
     width: 80px;
     margin-bottom: 58px;
@@ -156,6 +160,10 @@
 }
 
 .header-list__item-basket {
+  position: relative;
+
+  padding-left: 30px;
+
   &--inner {
     width: 321px;
   }
@@ -163,19 +171,108 @@
   @media (min-width: @tablet-width) {
     margin-top: -75px;
     margin-left: -14px;
-    padding-left: 100px;
+    padding-left: 50px;
     width: 305px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding-left: 87px;
+    padding-left: 37px;
     width: 371px;
 
     &--inner {
       width: 321px;
     }
   }
+}
+
+.header-list__link-search,
+.header-list__link-basket {
+  position: relative;
+  z-index: 3;
+
+  padding-left: 45px;
+  padding-top: 7px;
+
+  background-color: none;
+}
+
+.header-list__link-basket {
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+  }
+}
+
+.header-list__search-svg,
+.header-list__basket-svg {
+  position: absolute;
+  top: 26px;
+  left: 30px;
+  z-index: 2;
+
+  opacity: 0.2;
+}
+
+.header-list__search-svg {
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    top: 64px;
+    left: 34px;
+  }
+
+  &:hover {
+    fill: @light-teal;
+
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @light-teal;
+
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 5px;
+    left: 344px;
+  }
+}
+
+.header-list__basket-svg {
+  @media (min-width: @tablet-width) {
+    top: 63px;
+    left: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 4px;
+    left: 37px;
+  }
+}
+
+.header-list__link-search:hover ~ .header-list__search-svg {
+  fill: @light-teal;
+
+  opacity: 1;
+}
+
+.header-list__link-search:active ~ .header-list__search-svg {
+  fill: @light-teal;
+
+  opacity: 0.3;
+}
+
+.header-list__link-basket:hover ~ .header-list__basket-svg {
+  fill: @light-teal;
+
+  opacity: 1;
+}
+
+.header-list__link-basket:active ~ .header-list__basket-svg {
+  fill: @light-teal;
+
+  opacity: 0.3;
 }
 
 .header-list__link {
@@ -186,18 +283,18 @@
 
   .link-reseter();
 
+  &[href]:hover {
+    .opacity-hover()
+  }
+
+  &[href]:active {
+    .opacity-active()
+  }
+
   @media (min-width: @tablet-width) {
     font-family: "Open Sans";
     font-size: 15px;
     font-weight: 700;
-
-    &[href]:hover {
-      .opacity-hover()
-    }
-
-    &[href]:active {
-      .opacity-active()
-    }
 
     &--basket {
       font-size: 16px;

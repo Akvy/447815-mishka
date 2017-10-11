@@ -13,15 +13,27 @@
   }
 }
 
+.main-footer__item {
+  @media (min-width: @tablet-width) {
+    width: 33%;
+  }
+}
+
 .main-footer__list {
   .basic-list-reseter();
 
   margin-top: 24px;
+  width: 100%;
 
   background-color: @light-gray;
 
+  &--form {
+    margin-top: 25px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 57px;
+    padding-bottom: 50px;
     display: flex;
 
     &--form {
@@ -33,13 +45,5 @@
     &--form {
       margin-top: 31px;
     }
-  }
-}
-
-.footer-logo {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
   }
 }

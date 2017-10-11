@@ -133,17 +133,30 @@
   }
 }
 
-.name-field__input[placeholder]:hover {
+.name-field__input:hover {
+  border-color: @lighter-teal;
+}
+
+.name-field__input:active {
+  border-color: @lighter-teal;
+}
+
+.name-field__input:focus {
+  border-color: @lighter-teal;
+}
+
+.name-field__input::placeholder {
   opacity: 0.3;
-  border-color: @light-teal;
 }
 
-.name-field__input[placeholder]:active {
-  opacity: 1;
-  border-color: @light-teal;
+.name-field__input:hover::placeholder {
+  opacity: 0.3;
 }
 
-.name-field__input[placeholder]:focus {
+.name-field__input:active::placeholder {
   opacity: 1;
-  border-color: @light-teal;
+}
+
+.name-field__input:focus::placeholder {
+  opacity: 1;
 }
