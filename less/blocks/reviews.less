@@ -135,6 +135,8 @@
 
   background-color: @white;
   border: 1px solid @gray;
+
+  cursor: pointer;
 }
 
 .reviews__prev {
@@ -145,12 +147,18 @@
   border-right: none;
 
   outline: none;
+
+  cursor: pointer;
 }
 
 .reviews__prev-arrow {
   position: absolute;
   top: 12px;
   left: 38px;
+
+  transition-duration: 0.3s;
+
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     top: 21px;
@@ -171,7 +179,6 @@
   .opacity-active();
 }
 
-
 .reviews__next {
   position: relative;
 
@@ -182,6 +189,10 @@
   position: absolute;
   top: 12px;
   left: 37px;
+
+  transition-duration: 0.3s;
+
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     top: 21px;

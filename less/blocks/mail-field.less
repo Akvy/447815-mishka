@@ -20,7 +20,7 @@
     width: 768px;
     height: 119px;
 
-    background-color: @light-gray;
+    background-color: @gray-light;
     border: none;
   }
 
@@ -36,7 +36,7 @@
 
   font-size: 17px;
   line-height: 16px;
-  color: @light-teal;
+  color: @teal-light;
   text-transform: uppercase;
   font-weight: 700;
 
@@ -49,7 +49,7 @@
     width: 179px;
     height: 1px;
 
-    background-color: @light-teal;
+    background-color: @teal-light;
   }
 
   @media (min-width: @tablet-width) {
@@ -83,6 +83,8 @@
 
   outline: none;
 
+  transition-duration: 0.4s;
+
   @media (min-width: @tablet-width) {
     position: relative;
     bottom: -4px;
@@ -111,15 +113,15 @@
 }
 
 .mail-field__input:hover {
-  border-color: @lighter-teal;
+  border-color: @teal-lighter;
 }
 
 .mail-field__input:active {
-  border-color: @lighter-teal;
+  border-color: @teal-lighter;
 }
 
 .mail-field__input:focus {
-  border-color: @lighter-teal;
+  border-color: @teal-lighter;
 }
 
 .mail-field__input::placeholder {
@@ -145,6 +147,8 @@
 
   opacity: 0.2;
 
+  transition-duration: 0.4s;
+
   @media (min-width: @tablet-width) {
     top: 28px;
     right: 72px;
@@ -156,19 +160,19 @@
 }
 
 .mail-field__input:hover ~ .mail-field__mail-svg {
-  fill: @lighter-teal;
+  fill: @teal-lighter;
 
   opacity: 1;
 }
 
 .mail-field__input:active ~ .mail-field__mail-svg {
-  fill: @lighter-teal;
+  fill: @teal-lighter;
 
   opacity: 1;
 }
 
 .mail-field__input:focus ~ .mail-field__mail-svg {
-  fill: @lighter-teal;
+  fill: @teal-lighter;
 
   opacity: 1;
 }

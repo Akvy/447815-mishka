@@ -24,7 +24,7 @@
 
   letter-spacing: 1px;
 
-  background-color: @light-teal;
+  background-color: @teal-light;
 
   @media (min-width: @tablet-width) {
 
@@ -49,7 +49,7 @@
 }
 
 .features-type-list__item:last-of-type {
-  background-color: @dark-teal;
+  background-color: @teal-dark;
 
   @media (min-width: @tablet-width) {
     margin-right: 50px;
@@ -70,6 +70,8 @@
 
   font-size: 19px;
   color: #ffffff;
+
+  transition-duration: 0.15s;
 
   &:active {
     .opacity-active();
@@ -106,6 +108,8 @@
 
   opacity: 0.5;
 
+  transition-duration: 0.15s;
+
   @media (min-width: @tablet-width) {
     top: 30px;
   }
@@ -125,6 +129,8 @@
   right: 27px;
 
   opacity: 0.5;
+
+  transition-duration: 0.15s;
 
   @media (min-width: @tablet-width) {
     top: 32px;

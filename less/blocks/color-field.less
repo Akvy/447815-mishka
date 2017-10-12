@@ -16,7 +16,7 @@
     padding: 0;
     height: 312px;
 
-    background-color: @light-gray;
+    background-color: @gray-light;
   }
 
   @media (min-width: @desktop-width) {
@@ -30,7 +30,7 @@
 
   font-size: 17px;
   line-height: 16px;
-  color: @light-teal;
+  color: @teal-light;
   text-transform: uppercase;
   font-weight: 700;
 
@@ -43,7 +43,7 @@
     width: 200px;
     height: 1px;
 
-    background-color: @light-teal;
+    background-color: @teal-light;
   }
 
   @media (min-width: @tablet-width) {
@@ -163,13 +163,16 @@
     position: absolute;
     top: 7px;
     left: 3px;
+    z-index: 6;
 
     content: "";
     width: 36px;
     height: 35px;
 
-    background-color: @white;
+    background-color: none;
     border: 2px solid @asphalt;
+
+    transition-duration: 0.2s;
   }
 
   @media (min-width: @tablet-width) {
@@ -187,8 +190,6 @@
 
       width: 50px;
       height: 48px;
-
-      background-color: @light-gray;
     }
   }
 }
@@ -211,49 +212,28 @@
   transform: scale(0.7);
 
   @media (min-width: @tablet-width) {
-    top: 3px;
+    top: 55px;
     left: 30px;
+    z-index: 5;
 
     transform: scale(1);
 
-    &--tiffany {
-      top: 55px;
+    &--white {
+      top: 3px;
     }
 
-    &--black {
-      top: 55px;
-    }
-
-    &--pink {
-      top: 55px;
-    }
-
-    &--orange {
-      top: 55px;
+    &--gray {
+      top: 3px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    &--tiffany {
-      top: 3px;
-    }
-
-    &--black {
-      top: 3px;
-    }
-
-    &--pink {
-      top: 3px;
-    }
-
-    &--orange {
-      top: 3px;
-    }
+    top: 3px;
   }
 }
 
 .color-field__input:hover ~ .color-field__color::before {
-  border-color: @lighter-teal;
+  border-color: @teal-lighter;
 }
 
 .color-field__input:active ~ .color-field__color::before {

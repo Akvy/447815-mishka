@@ -17,7 +17,7 @@
     width: 260px;
     height: 1px;
 
-    background-color: @dark-gray;
+    background-color: @gray-dark;
   }
 
   @media (min-width: @tablet-width) {
@@ -49,6 +49,8 @@
   color: @black;
   font-weight: 800;
 
+  transition-duration: 0.3s;
+
   &:active {
     opacity: 0.3;
   }
@@ -73,6 +75,8 @@
   position: absolute;
   top: 9px;
   right: -27px;
+
+  transition-duration: 0.2s;
 
   &:hover {
     fill: @teal;

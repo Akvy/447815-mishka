@@ -18,7 +18,7 @@
 
   font-size: 17px;
   line-height: 16px;
-  color: @light-teal;
+  color: @teal-light;
   text-transform: uppercase;
   font-weight: 700;
 
@@ -31,7 +31,7 @@
     width: 200px;
     height: 1px;
 
-    background-color: @light-teal;
+    background-color: @teal-light;
   }
 
   @media (min-width: @tablet-width) {
@@ -96,7 +96,6 @@
   display: inline-block;
   padding-left: 66px;
 
-
   cursor: pointer;
 
   &::before {
@@ -140,7 +139,7 @@
 }
 
 .type-field__input:checked ~ .type-field__radio::before {
-  background-color: @lighter-teal;
+  background-color: @teal-lighter;
   border: 2px solid @asphalt;
   box-shadow: inset 0 0 0 10px @white;
 
@@ -150,11 +149,11 @@
 }
 
 .type-field__input:hover ~ .type-field__radio::before {
-  border-color: @lighter-teal;
+  border-color: @teal-lighter;
 }
 
 .type-field__input:active ~ .type-field__radio::before {
-  background-color: @lighter-teal;
+  background-color: @teal-lighter;
   border-color: @asphalt;
   box-shadow: inset 0 0 0 10px @white;
   opacity: 0.3;

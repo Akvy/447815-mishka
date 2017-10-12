@@ -8,12 +8,12 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    background-color: @lighter-gray;
-    background-image: linear-gradient(@white 42px, @lighter-gray 42px);
+    background-color: @gray-lighter;
+    background-image: linear-gradient(@white 42px, @gray-lighter 42px);
 
     &--inner {
-      background-color: @light-gray;
-      background-image: linear-gradient(@white 42px, @light-gray 42px);
+      background-color: @gray-light;
+      background-image: linear-gradient(@white 42px, @gray-light 42px);
     }
   }
 
@@ -56,13 +56,13 @@
     margin: 0;
     margin-bottom: 58px;
 
-    background-color: @lighter-gray;
-    background-image: linear-gradient(@white 42px, @lighter-gray 42px);
+    background-color: @gray-lighter;
+    background-image: linear-gradient(@white 42px, @gray-lighter 42px);
     border: none;
 
     &--inner {
-      background-color: @light-gray;
-      background-image: linear-gradient(@white 42px, @light-gray 42px);
+      background-color: @gray-light;
+      background-image: linear-gradient(@white 42px, @gray-light 42px);
     }
   }
 
@@ -73,10 +73,10 @@
     width: 195px;
 
     background-color: @white;
-    background-image: linear-gradient(@white 57px, @lighter-gray 57px);
+    background-image: linear-gradient(@white 57px, @gray-lighter 57px);
 
     &--inner {
-      background-image: linear-gradient(@white 57px, @light-gray 57px);
+      background-image: linear-gradient(@white 57px, @gray-light 57px);
     }
   }
 }
@@ -113,10 +113,10 @@
   @media (min-width: @tablet-width) {
     margin-top: -74px;
 
-    background-image: linear-gradient(@white 117px, @lighter-gray 117px);
+    background-image: linear-gradient(@white 117px, @gray-lighter 117px);
 
     &--inner {
-      background-image: linear-gradient(@white 117px, @light-gray 117px);
+      background-image: linear-gradient(@white 117px, @gray-light 117px);
     }
   }
 
@@ -124,10 +124,10 @@
     margin: 0;
     padding: 0;
 
-    background-image: linear-gradient(@white 58px, @lighter-gray 58px);
+    background-image: linear-gradient(@white 58px, @gray-lighter 58px);
 
     &--inner {
-      background-image: linear-gradient(@white 58px, @light-gray 58px);
+      background-image: linear-gradient(@white 58px, @gray-light 58px);
     }
   }
 }
@@ -145,7 +145,7 @@
     white-space: nowrap;
     overflow: hidden;
 
-    border-left: 1px solid @light-gray;
+    border-left: 1px solid @gray-light;
   }
 
   @media (min-width: @desktop-width) {
@@ -217,6 +217,8 @@
   z-index: 2;
 
   opacity: 0.2;
+
+  transition-duration: 0.3s;
 }
 
 .header-list__search-svg {
@@ -228,13 +230,13 @@
   }
 
   &:hover {
-    fill: @light-teal;
+    fill: @teal-light;
 
     opacity: 1;
   }
 
   &:active {
-    fill: @light-teal;
+    fill: @teal-light;
 
     opacity: 0.3;
   }
@@ -258,25 +260,25 @@
 }
 
 .header-list__link-search:hover ~ .header-list__search-svg {
-  fill: @light-teal;
+  fill: @teal-light;
 
   opacity: 1;
 }
 
 .header-list__link-search:active ~ .header-list__search-svg {
-  fill: @light-teal;
+  fill: @teal-light;
 
   opacity: 0.3;
 }
 
 .header-list__link-basket:hover ~ .header-list__basket-svg {
-  fill: @light-teal;
+  fill: @teal-light;
 
   opacity: 1;
 }
 
 .header-list__link-basket:active ~ .header-list__basket-svg {
-  fill: @light-teal;
+  fill: @teal-light;
 
   opacity: 0.3;
 }
@@ -288,6 +290,8 @@
   line-height: 24px;
 
   .link-reseter();
+
+  transition-duration: 0.3s;
 
   &[href]:hover {
     .opacity-hover()
@@ -311,14 +315,6 @@
   @media (min-width: @desktop-width) {
     font-size: 17px;
     line-height: 24px;
-
-    &[href]:hover {
-      .opacity-hover()
-    }
-
-    &[href]:active {
-      .opacity-active()
-    }
 
     &--form {
       position: relative;

@@ -20,7 +20,7 @@
   border-bottom: 1px solid @gray;
 
   &--inner {
-    border-bottom: 1px solid @lighter-gray;
+    border-bottom: 1px solid @gray-lighter;
   }
 
   @media (min-width: @tablet-width) {
@@ -81,6 +81,8 @@
 .page-header__logo {
   margin: auto;
 
+  transition-duration: 0.3s;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     z-index: 10;
@@ -107,8 +109,10 @@
   margin-left: -3px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 11px;
-    margin-left: 57px;
+    margin: 0;
+    position: relative;
+    top: 10px;
+    left: 60px;
   }
 }
 
@@ -162,6 +166,8 @@
     font-size: 15px;
     line-height: 24px;
     font-weight: 700;
+
+    transition-duration: 0.3s;
   }
 
   &:hover {

@@ -20,7 +20,7 @@
     width: 768px;
     height: 125px;
 
-    background-color: @light-gray;
+    background-color: @gray-light;
     border: none;
   }
 
@@ -36,7 +36,7 @@
 
   font-size: 17px;
   line-height: 16px;
-  color: @light-teal;
+  color: @teal-light;
   text-transform: uppercase;
   font-weight: 700;
 
@@ -49,7 +49,7 @@
     width: 200px;
     height: 1px;
 
-    background-color: @light-teal;
+    background-color: @teal-light;
   }
 
   @media (min-width: @tablet-width) {
@@ -82,6 +82,8 @@
 
   outline: none;
 
+  transition-duration: 0.4s;
+
   @media (min-width: @tablet-width) {
     position: relative;
     bottom: -44px;
@@ -110,15 +112,15 @@
 }
 
 .phone-field__input:hover {
-  border-color: @lighter-teal;
+  border-color: @teal-lighter;
 }
 
 .phone-field__input:active {
-  border-color: @lighter-teal;
+  border-color: @teal-lighter;
 }
 
 .phone-field__input:focus {
-  border-color: @lighter-teal;
+  border-color: @teal-lighter;
 }
 
 .phone-field__input::placeholder {
@@ -144,6 +146,8 @@
 
   opacity: 0.2;
 
+  transition-duration: 0.4s;
+
   @media (min-width: @tablet-width) {
     top: 69px;
     right: 76px;
@@ -155,19 +159,19 @@
 }
 
 .phone-field__input:hover ~ .phone-field__phone-svg {
-  fill: @lighter-teal;
+  fill: @teal-lighter;
 
   opacity: 1;
 }
 
 .phone-field__input:active ~ .phone-field__phone-svg {
-  fill: @lighter-teal;
+  fill: @teal-lighter;
 
   opacity: 1;
 }
 
 .phone-field__input:focus ~ .phone-field__phone-svg {
-  fill: @lighter-teal;
+  fill: @teal-lighter;
 
   opacity: 1;
 }

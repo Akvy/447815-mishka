@@ -2,6 +2,7 @@ var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var trendToggle = document.querySelector('.trending__button');
 var trendModal = document.querySelector('.modal-cart');
+var modalWrapper = document.querySelector('.modal-cart__wrapper');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -24,6 +25,17 @@ trendToggle.addEventListener('click', function() {
     trendModal.classList.remove('modal-cart--opened');
   }
 });
+
+// modalWrapper.addEventListener('click', function() {
+//   if (trendModal.classList.contains('modal-cart--opened')) {
+//     trendModal.classList.remove('modal-cart--opened');
+//     trendModal.classList.add('modal-cart--closed');
+//   }
+//   else {
+//     trendModal.classList.remove('modal-cart--closed');
+//     trendModal.classList.add('modal-cart--opened');
+//   }
+// });
 
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
