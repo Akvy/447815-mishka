@@ -1,0 +1,33 @@
+.footer-logo {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.footer-logo__link {
+  position: relative;
+}
+
+.footer-logo__svg {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+
+  transition-duration: 0.3s;
+
+  &:hover {
+    fill: @teal;
+  }
+
+  &:active {
+    .opacity-active();
+
+    fill: @teal;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 110px;
+  }
+}

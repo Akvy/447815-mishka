@@ -1,19 +1,146 @@
 .videos__wrapper {
   .mobile-container();
 
+  position: relative;
+
   padding: 30px;
   padding-top: 0;
-  margin-top: -4px;
-  margin-bottom: 61px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 59px;
+  width: 260px;
+
+  border: 1px solid @gray;
+
+  transition-duration: 0.5s;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    margin-top: 25px;
+    margin-bottom: 63px;
+    padding: 0;
+    padding-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      box-shadow: 3px 6px 10px 0 @black-opa;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 @black-opa;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    width: 1048px;
+    margin-top: 29px;
+    margin-bottom: 105px;
+    padding-bottom: 0;
+  }
+}
+
+.videos__video {
+  position: relative;
+  top: 0;
+  left: -1px;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+    width: 668px;
+    height: 453px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 682px;
+  }
+}
+
+.videos__play-svg {
+  position: absolute;
+  top: 132px;
+  left: 79px;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+
+    transition-duration: 0.15s;
+  }
+
+  &:active {
+    .opacity-active();
+
+    transform: scale(0.8);
+
+    transition-duration: 0.05s;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 188px;
+    left: 283px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 289px;
+  }
 }
 
 .videos__header {
-  padding-left: 90px;
+  padding-top: 24px;
+  padding-left: 89px;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 
   font-size: 17px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-top: 39px;
+    padding-left: 105px;
+    order: 1;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    border-top: 1px solid @gray;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 25px;
+    right: 128px;
+
+    padding: 0;
+    padding-top: 70px;
+    margin: 0;
+    width: 160px;
+
+    border-top: none;
+  }
+}
+
+.videos__camera-svg {
+  position: absolute;
+  top: 30px;
+  left: 33px;
+
+  @media (min-width: @tablet-width) {
+    top: 488px;
+    left: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 41px;
+    left: auto;
+    right: 254px;
+  }
 }
 
 .videos__description {
@@ -22,6 +149,25 @@
   margin-right: 35px;
 
   font-size: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: 32px;
+    margin-left: 40px;
+    padding-right: 40px;
+    order: 2;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 144px;
+    right: 18px;
+
+    width: 230px;
+  }
 }
 
 .videos__button {
@@ -33,92 +179,19 @@
   padding-bottom: 14px;
   padding-left: 23px;
   padding-right: 24px;
-}
 
-@media (min-width: @tablet-width) {
-  .videos__wrapper {
-    width: @tablet-width;
-    margin-top: 25px;
-    padding-left: 50px;
-    margin-bottom: 79px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .videos__video {
-    order: 0;
-
-    width: 668px;
-    height: 455px;
-  }
-
-  .videos__header {
-    margin-top: 39px;
-    margin-bottom: 0;
-    padding-left: 106px;
-    order: 1;
-
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .videos__description {
-    margin: 0;
-    margin-top: 32px;
-    margin-left: 40px;
-    padding-right: 60px;
-    order: 2;
-
-    font-size: 15px;
-    line-height: 30px;
-  }
-
-  .videos__button {
+  @media (min-width: @tablet-width) {
     margin: 0;
     margin-top: 35px;
     margin-left: 42px;
-    margin-right: 62px;
+    margin-right: 41px;
     order: 3;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .videos__wrapper {
-    position: relative;
-
-    width: 1150px;
-    margin-top: 55px;
-    margin-bottom: 76px;
-    padding-right: 50px;
-  }
-
-  .videos__video {
-    width: 682px;
-  }
-
-  .videos__header {
+  @media (min-width: @desktop-width) {
     position: absolute;
-    top: 27px;
-    right: 180px;
-
-    padding: 0;
-    padding-top: 70px;
-    margin: 0;
-    width: 160px;
-  }
-
-  .videos__description {
-    position: absolute;
-    top: 146px;
-    right: 50px;
-
-    width: 230px;
-  }
-
-  .videos__button {
-    position: absolute;
-    bottom: 89px;
-    right: 108px;
+    bottom: 59px;
+    right: 56px;
 
     margin: 0;
     padding-left: 41px;

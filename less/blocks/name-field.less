@@ -6,20 +6,72 @@
   padding-right: 0;
 
   border: none;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    margin: 0;
+    margin-top: 100px;
+    padding: 0;
+    height: 240px;
+  }
 }
 
 .name-field__heading {
+  position: relative;
+
   font-size: 17px;
   line-height: 16px;
-  color: @light-teal;
+  color: @teal-light;
   text-transform: uppercase;
   font-weight: 700;
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 64px;
+
+    content: "";
+    width: 200px;
+    height: 1px;
+
+    background-color: @teal-light;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 4px;
+    padding-left: 1px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+    padding-left: 61px;
+  }
 }
 
 .name-field__list {
   .basic-list-reseter();
 
   padding-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 1px;
+    left: 166px;
+
+    padding: 0;
+    width: 510px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 175px;
+
+    width: 708px;
+  }
 }
 
 .name-field__item {
@@ -27,12 +79,25 @@
   margin-left: 0;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 38px;
+    flex-direction: row;
+  }
 }
 
 .name-field__input-heading {
   .order-form-radio-checkbox-names();
 
   margin-left: 2px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 1px;
+    margin-left: 2px;
+
+    font-size: 18px;
+    line-height: 19px;
+  }
 }
 
 .name-field__input {
@@ -46,46 +111,12 @@
 
   border: none;
   border-bottom: 2px solid @black;
-}
 
-@media (min-width: @tablet-width) {
-  .name-field {
-    position: relative;
+  outline: none;
 
-    margin: 0;
-    margin-top: 100px;
-    padding: 0;
-    height: 240px;
-  }
+  transition-duration: 0.4s;
 
-  .name-field__heading {
-    padding-top: 4px;
-    padding-left: 1px;
-  }
-
-  .name-field__list {
-    position: absolute;
-    top: 1px;
-    left: 166px;
-
-    padding: 0;
-    width: 510px;
-  }
-
-  .name-field__item {
-    padding-bottom: 38px;
-    flex-direction: row;
-  }
-
-  .name-field__input-heading {
-    margin-top: 1px;
-    margin-left: 2px;
-
-    font-size: 18px;
-    line-height: 19px;
-  }
-
-  .name-field__input {
+  @media (min-width: @tablet-width) {
     margin: 0;
     margin-left: 26px;
     margin-right: 8px;
@@ -96,23 +127,38 @@
 
     font-size: 19px;
     line-height: 18px;
-  }
 
-  .name-field__input--lastname,
-  .name-field__input--patronym {
-    margin-left: 30px;
+    &--lastname,
+    &--patronym {
+      margin-left: 30px;
+    }
   }
 }
 
-@media (min-width: @desktop-width) {
-  .name-field__heading {
-    padding-top: 5px;
-    padding-left: 61px;
-  }
+.name-field__input:hover {
+  border-color: @teal-lighter;
+}
 
-  .name-field__list {
-    left: 175px;
+.name-field__input:active {
+  border-color: @teal-lighter;
+}
 
-    width: 708px;
-  }
+.name-field__input:focus {
+  border-color: @teal-lighter;
+}
+
+.name-field__input::placeholder {
+  opacity: 0.3;
+}
+
+.name-field__input:hover::placeholder {
+  opacity: 0.3;
+}
+
+.name-field__input:active::placeholder {
+  opacity: 1;
+}
+
+.name-field__input:focus::placeholder {
+  opacity: 1;
 }

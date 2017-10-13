@@ -1,60 +1,73 @@
 .color-field {
-  margin-top: 25px;
+  margin-top: 24px;
   padding-left: 0;
   margin-left: -3px;
 
   border: none;
-}
 
-.color-field__heading {
-  font-size: 17px;
-  line-height: 16px;
-  color: @light-teal;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.color-field__list {
-  .basic-list-reseter();
-
-  padding-top: 28px;
-}
-
-.color-field__option {
-  padding-left: 65px;
-
-  margin-bottom: 37px;
-
-  &:last-of-type {
-    margin-bottom: 4px;
-  }
-}
-
-.color-field__color {
-  .order-form-radio-checkbox-names();
-}
-
-@media (min-width: @tablet-width) {
-  .color-field {
+  @media (min-width: @tablet-width) {
     position: relative;
     top: 37px;
     left: -49px;
 
     width: @tablet-width;
     margin: 0;
+    margin-top: 30px;
     padding: 0;
     height: 312px;
 
-    background-color: @light-gray;
+    background-color: @gray-light;
   }
 
-  .color-field__heading {
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    height: 235px;
+  }
+}
+
+.color-field__heading {
+  position: relative;
+
+  font-size: 17px;
+  line-height: 16px;
+  color: @teal-light;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 64px;
+
+    content: "";
+    width: 200px;
+    height: 1px;
+
+    background-color: @teal-light;
+  }
+
+  @media (min-width: @tablet-width) {
     position: relative;
     top: 75px;
     left: 48px;
+
+    &::after {
+      display: none;
+    }
   }
 
-  .color-field__list {
+  @media (min-width: @desktop-width) {
+    top: 74px;
+    left: 107px;
+  }
+}
+
+.color-field__list {
+  .basic-list-reseter();
+
+  padding-top: 28px;
+
+  @media (min-width: @tablet-width) {
     position: absolute;
     top: 71px;
     left: 197px;
@@ -66,47 +79,7 @@
     flex-wrap: wrap;
   }
 
-  .color-field__option {
-    margin: 0;
-    padding: 0;
-    width: 250px;
-  }
-
-  .color-field__option--tiffany,
-  .color-field__option--black,
-  .color-field__option--pink,
-  .color-field__option--orange {
-    padding-top: 52px;
-  }
-
-  .color-field__option--black,
-  .color-field__option--gray,
-  .color-field__option--orange {
-    margin-left: 12px;
-  }
-
-  .color-field__color {
-    padding-left: 100px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    font-size: 18px;
-    line-height: 19px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .color-field {
-    width: 1150px;
-    height: 235px;
-  }
-
-  .color-field__heading {
-    top: 74px;
-    left: 107px;
-  }
-
-  .color-field__list {
+  @media (min-width: @desktop-width) {
     top: 51px;
     left: 205px;
     padding-top: 19px;
@@ -114,34 +87,217 @@
     width: 900px;
     height: 180px;
   }
+}
 
-  .color-field__option {
-    height: 50px;
-  }
+.color-field__option {
+  position: relative;
 
-  .color-field__option--tiffany,
-  .color-field__option--black,
-  .color-field__option--pink,
-  .color-field__option--orange {
-    padding-top: 0;
-  }
+  margin-bottom: 37px;
 
-  .color-field__option--black,
-  .color-field__option--pink,
-  .color-field__option--orange {
+  @media (min-width: @tablet-width) {
     margin: 0;
-    margin-top: -23px;
+    padding: 0;
+    width: 250px;
+
+    &--tiffany,
+    &--black,
+    &--pink,
+    &--orange {
+      padding-top: 52px;
+    }
+
+    &--black,
+    &--gray,
+    &--orange {
+      margin-left: 12px;
+    }
   }
 
-  .color-field__option--pink {
-    margin-left: 12px;
+  @media (min-width: @desktop-width) {
+    height: 50px;
+
+    &--tiffany {
+      margin-left: 15px;
+    }
+
+    &--tiffany,
+    &--black,
+    &--pink,
+    &--orange {
+      padding-top: 0;
+    }
+
+    &--black,
+    &--pink,
+    &--orange {
+      margin: 0;
+      margin-top: -23px;
+    }
+
+    &--pink {
+      margin-left: 12px;
+    }
+
+    &--orange {
+      margin-left: 14px;
+    }
+  }
+}
+
+.color-field__option:last-of-type {
+  margin-bottom: 4px;
+}
+
+.color-field__color {
+  .order-form-radio-checkbox-names();
+
+  position: relative;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 65px;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 7px;
+    left: 3px;
+    z-index: 6;
+
+    content: "";
+    width: 36px;
+    height: 35px;
+
+    background-color: none;
+    border: 2px solid @asphalt;
+
+    transition-duration: 0.2s;
   }
 
-  .color-filed__option--tiffany {
-    margin-left: 15px;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 15px;
+    padding-left: 80px;
+    padding-top: 15px;
+    margin-left: 20px;
+
+    font-size: 18px;
+    line-height: 19px;
+
+    &::before {
+      top: 3px;
+      left: -1px;
+
+      width: 50px;
+      height: 48px;
+    }
+  }
+}
+
+.color-field__tick-svg {
+  display: none;
+}
+
+.color-field__input:checked ~ .color-field__color::before {
+  border: 2px solid @asphalt;
+}
+
+.color-field__input:checked ~ .color-field__tick-svg {
+  position: absolute;
+  top: 1px;
+  left: 6px;
+
+  display: block;
+
+  transform: scale(0.7);
+
+  @media (min-width: @tablet-width) {
+    top: 55px;
+    left: 30px;
+    z-index: 5;
+
+    transform: scale(1);
+
+    &--white {
+      top: 3px;
+    }
+
+    &--gray {
+      top: 3px;
+    }
   }
 
-  .color-field__option--orange {
-    margin-left: 14px;
+  @media (min-width: @desktop-width) {
+    top: 3px;
   }
+}
+
+.color-field__input:hover ~ .color-field__color::before {
+  border-color: @teal-lighter;
+}
+
+.color-field__input:active ~ .color-field__color::before {
+  border-color: @asphalt;
+  opacity: 0.3;
+}
+
+.color-field__input:active ~ .color-field__tick-svg {
+  position: absolute;
+  top: 1px;
+  left: 6px;
+
+  display: block;
+
+  transform: scale(0.7);
+
+  @media (min-width: @tablet-width) {
+    top: 3px;
+    left: 30px;
+
+    transform: scale(1);
+
+    &--tiffany {
+      top: 55px;
+    }
+
+    &--black {
+      top: 55px;
+    }
+
+    &--pink {
+      top: 55px;
+    }
+
+    &--orange {
+      top: 55px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--tiffany {
+      top: 3px;
+    }
+
+    &--black {
+      top: 3px;
+    }
+
+    &--pink {
+      top: 3px;
+    }
+
+    &--orange {
+      top: 3px;
+    }
+  }
+}
+
+.color-field__input:checked:active ~ .color-field__color::before {
+  background-color: @white;
+  border: 2px solid @asphalt;
+  opacity: 0.3;
+}
+
+.color-field__input:checked:active ~ .color-field__tick-svg {
+  display: none;
 }

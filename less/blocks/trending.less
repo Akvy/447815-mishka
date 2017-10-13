@@ -4,68 +4,8 @@
   padding: 30px;
   padding-top: 27px;
   box-sizing: border-box;
-}
 
-.trending__header {
-  .lesser-header();
-
-  margin-bottom: 4px;
-}
-
-.trending__sub-header {
-  font-size: 17px;
-  line-height: 20px;
-  color: @light-teal;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.trending__description {
-  padding-top: 5px;
-  margin-bottom: 17px;
-
-  font-size: 15px;
-}
-
-.trending__table {
-  margin-bottom: 29px;
-
-  border-collapse: collapse;
-}
-
-.trending__table-class,
-.trending__table-value {
-  padding: 10px;
-  padding-left: 0;
-
-  font-size: 15px;
-  line-height: 20px;
-}
-
-.trending__table-value {
-  padding-left: 20px;
-}
-
-.trending__price-wrapper {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.trending__price {
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-
-.trending__button {
-  .typical-button();
-
-  margin-top: 27px;
-}
-
-@media (min-width: @tablet-width) {
-  .trending__wrapper {
+  @media (min-width: @tablet-width) {
     position: relative;
 
     padding: 0;
@@ -74,17 +14,54 @@
     width: @tablet-width;
   }
 
-  .trending__header-wrapper {
+  @media (min-width: @desktop-width) {
+    padding-left: 126px;
+    width: @desktop-width;
+  }
+}
+
+.trending__header-wrapper {
+  @media (min-width: @tablet-width) {
     margin-right: 50px;
     display: flex;
     justify-content: space-between;
   }
 
-  .trending__header {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 140px;
+    left: 142px;
+
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.trending__header {
+  .lesser-header();
+
+  margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
     .tablet-header();
   }
 
-  .trending__sub-header {
+  @media (min-width: @desktop-width) {
+    .desktop-header();
+
+    margin-top: -15px;
+    order: 2;
+  }
+}
+
+.trending__sub-header {
+  font-size: 17px;
+  line-height: 20px;
+  color: @teal-light;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  @media (min-width: @tablet-width) {
     display: block;
     margin-top: 11px;
     margin-right: 23px;
@@ -96,23 +73,57 @@
     text-align: center;
   }
 
-  .trending__content-wrapper {
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-right: 49px;
+  }
+}
+
+.trending__content-wrapper {
+  @media (min-width: @tablet-width) {
     margin-top: 43px;
     display: flex;
     justify-content: flex-start;
   }
 
-  .trending__description-wrapper {
+  @media (min-width: @desktop-width) {
+    margin-top: 16px;
+    margin-left: 145px;
+  }
+}
+
+.trending__description-wrapper {
+  min-width: 260px;
+
+  @media (min-width: @tablet-width) {
     width: 338px;
   }
 
-  .trending__picture {
+  @media (min-width: @desktop-width) {
+    margin-right: 16px;
+  }
+}
+
+.trending__picture {
+  @media (min-width: @tablet-width) {
     margin-top: 10px;
     width: 333px;
     height: 404px;
   }
 
-  .trending__description {
+  @media (min-width: @desktop-width) {
+    width: 525px;
+    height: 636px;
+  }
+}
+
+.trending__description {
+  padding-top: 5px;
+  margin-bottom: 17px;
+
+  font-size: 15px;
+
+  @media (min-width: @tablet-width) {
     margin: 0;
     margin-top: 2px;
     margin-left: 3px;
@@ -123,91 +134,148 @@
     line-height: 30px;
   }
 
-  .trending__table {
+  @media (min-width: @desktop-width) {
+    margin-top: 168px;
+    margin-left: 4px;
+  }
+}
+
+.trending__table {
+  width: 260px;
+  margin-bottom: 28px;
+
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
     margin-top: 35px;
+    margin-bottom: 29px;
     margin-left: 4px;
   }
 
-  .trending__table-value {
-    padding-left: 18px;
+  @media (min-width: @desktop-width) {
+    margin-top: 47px;
+  }
+}
+
+.trending__table-row {
+  position: relative;
+
+  border-bottom: 1px solid @gray-light;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+
+    &::after {
+      position: absolute;
+      bottom: 246px;
+      left: 50px;
+
+      content: "";
+      width: 291px;
+      height: 1px;
+
+      background-color: @gray-light;
+    }
+
+    &--2::after {
+      bottom: 206px;
+    }
+
+    &--3::after {
+      bottom: 166px;
+    }
   }
 
-  .trending__price-wrapper {
+  @media (min-width: @desktop-width) {
+    &::after {
+      bottom: 298px;
+      left: 194px;
+    }
+
+    &--2::after {
+      bottom: 258px;
+    }
+
+    &--3::after {
+      bottom: 218px;
+    }
+  }
+}
+
+.trending__table-class,
+.trending__table-value {
+  padding: 10px;
+  padding-left: 0;
+
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.trending__table-class {
+  &--row-2,
+  &--row-3 {
+    padding-top: 9px;
+  }
+}
+
+.trending__table-value {
+  padding-left: 10px;
+
+  &--row-2,
+  &--row-3 {
+    padding-top: 9px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 12px;
+  }
+}
+
+.trending__price-wrapper {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
     position: absolute;
     bottom: 0;
     left: 48px;
   }
 
-  .trending__price {
+  @media (min-width: @desktop-width) {
+    bottom: 0;
+    left: 275px;
+  }
+}
+
+.trending__price {
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
     letter-spacing: 0;
   }
+}
 
-  .trending__button {
+.trending__button {
+  .typical-button();
+
+  margin-top: 26px;
+  padding-top: 14px;
+
+  @media (min-width: @tablet-width) {
     margin-top: 34px;
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 99px;
     padding-right: 100px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .trending__wrapper {
-    position: relative;
-
-    margin-right: 16px;
-    width: @desktop-width;
-  }
-
-  .trending__header-wrapper {
-    position: absolute;
-    top: 140px;
-    left: 62px;
-
-    margin: 0;
-    padding: 0;
-  }
-
-  .trending__header {
-    .desktop-header();
-
-    margin-top: -15px;
-    order: 2;
-  }
-
-  .trending__sub-header {
-    margin-top: 0;
-    margin-right: 49px;
-  }
-
-  .trending__content-wrapper {
-    margin-top: 16px;
-    margin-left: 145px;
-  }
-
-  .trending__description-wrapper {
-    margin-right: 16px;
-  }
-
-  .trending__description {
-    margin-top: 168px;
-    margin-left: 4px;
-  }
-
-  .trending__table {
-    margin-top: 47px;
-  }
-
-  .trending__picture {
-    width: 525px;
-    height: 636px;
-  }
-
-  .trending__price-wrapper {
-    bottom: 0;
-    left: 195px;
   }
 }

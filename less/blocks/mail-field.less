@@ -1,38 +1,16 @@
 .mail-field {
+  position: relative;
+
   margin-top: 33px;
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 0;
   padding-left: 0;
+  padding-right: 0;
 
   border: none;
-  border-bottom: 2px solid @black;
-}
 
-.mail-field__heading {
-  margin-left: -3px;
-
-  font-size: 17px;
-  line-height: 16px;
-  color: @light-teal;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.mail-field__input {
-  margin-top: 15px;
-  margin-left: -3px;
-  padding-bottom: 16px;
-
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: 100;
-
-  border: none;
-}
-
-@media (min-width: @tablet-width) {
-  .mail-field {
+  @media (min-width: @tablet-width) {
     position: relative;
     top: -15px;
     left: -50px;
@@ -42,17 +20,72 @@
     width: 768px;
     height: 119px;
 
-    background-color: @light-gray;
+    background-color: @gray-light;
     border: none;
   }
 
-  .mail-field__heading {
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
+}
+
+.mail-field__heading {
+  position: relative;
+
+  margin-left: -3px;
+
+  font-size: 17px;
+  line-height: 16px;
+  color: @teal-light;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &::after {
+    position: absolute;
+    top: 7px;
+    left: 84px;
+
+    content: "";
+    width: 179px;
+    height: 1px;
+
+    background-color: @teal-light;
+  }
+
+  @media (min-width: @tablet-width) {
     position: relative;
     top: 34px;
     left: 52px;
+
+    &::after {
+      display: none;
+    }
   }
 
-  .mail-field__input {
+  @media (min-width: @desktop-width) {
+    top: 36px;
+    left: 112px;
+  }
+}
+
+.mail-field__input {
+  margin-top: 15px;
+  margin-left: -3px;
+  padding-bottom: 16px;
+  width: 100%;
+
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 100;
+
+  border: none;
+  border-bottom: 2px solid @black;
+
+  outline: none;
+
+  transition-duration: 0.4s;
+
+  @media (min-width: @tablet-width) {
     position: relative;
     bottom: -4px;
     right: -217px;
@@ -71,21 +104,75 @@
     background-color: inherit;
     border-bottom: 2px solid @black;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .mail-field {
-    width: 1150px;
-  }
-
-  .mail-field__heading {
-    top: 36px;
-    left: 112px;
-  }
-
-  .mail-field__input {
+  @media (min-width: @desktop-width) {
     right: -225px;
 
     width: 624px;
   }
+}
+
+.mail-field__input:hover {
+  border-color: @teal-lighter;
+}
+
+.mail-field__input:active {
+  border-color: @teal-lighter;
+}
+
+.mail-field__input:focus {
+  border-color: @teal-lighter;
+}
+
+.mail-field__input::placeholder {
+  opacity: 0.3;
+}
+
+.mail-field__input:hover::placeholder {
+  opacity: 0.3;
+}
+
+.mail-field__input:active::placeholder {
+  opacity: 1;
+}
+
+.mail-field__input:focus::placeholder {
+  opacity: 1;
+}
+
+.mail-field__mail-svg {
+  position: absolute;
+  top: 33px;
+  right: 4px;
+
+  opacity: 0.2;
+
+  transition-duration: 0.4s;
+
+  @media (min-width: @tablet-width) {
+    top: 28px;
+    right: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 229px;
+  }
+}
+
+.mail-field__input:hover ~ .mail-field__mail-svg {
+  fill: @teal-lighter;
+
+  opacity: 1;
+}
+
+.mail-field__input:active ~ .mail-field__mail-svg {
+  fill: @teal-lighter;
+
+  opacity: 1;
+}
+
+.mail-field__input:focus ~ .mail-field__mail-svg {
+  fill: @teal-lighter;
+
+  opacity: 1;
 }

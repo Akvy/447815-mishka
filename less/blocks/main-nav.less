@@ -1,5 +1,42 @@
 .main-nav {
   position: relative;
+  z-index: 9;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: @desktop-width;
+
+    &::before {
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+      left: 284px;
+
+      content: "";
+      width: 1px;
+      height: 90px;
+
+      background-color: @gray;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+      right: 449px;
+
+      content: "";
+      width: 1px;
+      height: 90px;
+
+      background-color: @gray;
+    }
+  }
 }
 
 .main-nav__toggle {
@@ -8,46 +45,83 @@
   left: -42px;
   z-index: 2;
 
-  padding-bottom: 32px;
+  width: 62px;
+  height: 60px;
+
+  border: none;
+  background-color: inherit;
+  border-bottom: 1px solid @gray;
+
+  &--closed::after {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+
+    content: "";
+    width: 20px;
+    height: 2px;
+
+    background-color: @black;
+    box-shadow: 0 6px @black,
+      0 12px @black;
+  }
+
+  &--opened::before {
+    position: absolute;
+    top: 19px;
+    left: 9px;
+
+    content: "";
+    width: 25px;
+    height: 2px;
+
+    background-color: @black;
+
+    transform: rotate(-45deg);
+  }
+
+  &--opened::after {
+    position: absolute;
+    top: 19px;
+    left: 9px;
+
+    content: "";
+    width: 25px;
+    height: 2px;
+
+    background-color: @black;
+
+    transform: rotate(45deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+
+    &--closed::after,
+    &--opened::after {
+      display: none;
+    }
+  }
 }
 
 .main-nav__wrapper {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: block;
+  }
 }
 
-.main-nav__toggle:hover ~ .main-nav__wrapper,
-.main-nav__toggle:active ~ .main-nav__wrapper,
-.main-nav__wrapper:hover {
+.main-nav__toggle--opened ~ .main-nav__wrapper,
+.main-nav--nojs .main-nav__wrapper {
   position: absolute;
   right: -20px;
   top: 59px;
 
   display: block;
-}
 
-@media (min-width: @tablet-width) {
-  .main-nav {
-    margin-left: 0;
-    width: @tablet-width;
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__wrapper {
-    display: block;
-  }
-
-  .main-nav__toggle:hover ~ .main-nav__wrapper,
-  .main-nav__toggle:active ~ .main-nav__wrapper,
-  .main-nav__wrapper:hover {
+  @media (min-width: @tablet-width) {
     position: static;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav {
-    width: @desktop-width;
   }
 }
