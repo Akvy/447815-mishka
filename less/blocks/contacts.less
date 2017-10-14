@@ -2,7 +2,9 @@
   margin-bottom: 39px;
 
   @media (min-width: @desktop-width) {
-    position: relative;
+    margin: 0 auto;
+    width: 1050px;
+    display: flex;
   }
 }
 
@@ -19,8 +21,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
+    margin: 0 auto;
+    width: 50%;
     padding-bottom: 179px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -43,7 +48,7 @@
     .desktop-header();
 
     margin-top: 118px;
-    margin-left: 241px;
+    margin-left: 143px;
   }
 }
 
@@ -60,7 +65,7 @@
 
   @media (min-width: @desktop-width) {
     top: 168px;
-    left: 163px;
+    left: 63px;
     right: auto;
   }
 }
@@ -79,7 +84,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 245px;
+    margin-left: 147px;
   }
 }
 
@@ -198,6 +203,8 @@
 }
 
 .contacts__map-wrapper {
+  position: relative;
+
   .mobile-container();
 
   @media (min-width: @tablet-width) {
@@ -206,27 +213,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 0;
-    right: 0;
-
     margin: 0;
+    width: 50%;
   }
 }
 
 .contacts__map-image {
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    height: 457px;
-  }
-
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 105px;
-    right: 197px;
-
-    width: 525px;
-    height: 457px;
+    position: relative;
+    top: 106px;
+    left: -1px;
   }
 }
 
@@ -251,8 +247,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 461px;
-    left: -572px;
+    position: relative;
+    top: 48px;
+    right: 350px;
+
+    margin: 0;
   }
 }

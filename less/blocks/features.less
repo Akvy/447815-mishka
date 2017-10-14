@@ -4,18 +4,29 @@
   background-position: -128.5px -18px;
   background-repeat: no-repeat;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  }
+
   @media (min-width: @tablet-width) {
     width: @tablet-width;
     padding-top: 92px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-position: 0 -58px;
+    background-position: -191px -58px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: 1150px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
 
-    background-position: center;
+    background-position: 0px -1px;
+    background-size: 1250px 746px;
   }
 }
 
