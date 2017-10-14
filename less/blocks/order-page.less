@@ -1,3 +1,35 @@
+.order-page__header-wrapper {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
+}
+
+.order-page__zigzag-svg {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 156px;
+    left: 0;
+
+    width: 768px;
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 237px;
+
+    width: 1150px;
+  }
+}
+
 .order-page__header {
   .inner-page-header();
 

@@ -62,7 +62,15 @@
 
     <main class="page-main catalog-main">
       <section class="shop-catalog">
-        <h1 class="shop-catalog__header">Каталог товаров</h1>
+        <div class="shop-catalog__header-wrapper">
+          <h1 class="shop-catalog__header">Каталог товаров</h1>
+
+          <picture>
+            <source media="(min-width: 1250px)" src="img/bg-zigzag-fill.svg">
+            <source media="(min-width: 768px)" src="img/bg-zigzag-fill.svg">
+            <img class="shop-catalog__zigzag-svg" src="img/bg-zigzag-fill.svg">
+          </picture>
+        </div>
 
         <div class="shop-catalog__wrapper">
           <ul class="shop-catalog__list">
