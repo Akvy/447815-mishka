@@ -9,12 +9,13 @@
     position: relative;
 
     padding: 0;
-    padding-top: 47px;
+    padding-top: 24px;
     padding-left: 46px;
     width: @tablet-width;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 10px;
     padding-left: 126px;
     width: @desktop-width;
   }
@@ -49,7 +50,7 @@
   @media (min-width: @desktop-width) {
     .desktop-header();
 
-    margin-top: -15px;
+    margin-top: -52px;
     order: 2;
   }
 }
@@ -74,7 +75,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 0;
+    margin-top: -36px;
     margin-right: 49px;
   }
 }
@@ -188,16 +189,16 @@
 
   @media (min-width: @desktop-width) {
     &::after {
-      bottom: 298px;
-      left: 194px;
+      bottom: 224px;
+      left: 277px;
     }
 
     &--2::after {
-      bottom: 258px;
+      bottom: 264px;
     }
 
     &--3::after {
-      bottom: 218px;
+      bottom: 304px;
     }
   }
 }
@@ -243,12 +244,11 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     left: 48px;
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 0;
     left: 275px;
   }
 }
@@ -277,5 +277,26 @@
     padding-bottom: 14px;
     padding-left: 99px;
     padding-right: 100px;
+  }
+}
+
+.trending__zigzag-svg {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: -10px;
+    left: 0;
+
+    width: 768px;
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -16px;
+    left: 1px;
+
+    width: 1248px;
+    height: 37px;
   }
 }
