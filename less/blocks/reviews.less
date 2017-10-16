@@ -1,3 +1,14 @@
+.reviews {
+  background-image: none;
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: 1050px;
+    background-position: 11px 602px;
+  }
+}
+
 .reviews__wrapper {
   .mobile-container();
 
@@ -22,7 +33,7 @@
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    padding-bottom: 150px;
+    padding-bottom: 200px;
     padding-left: 99px;
 
     background-position: 100px 76px;
