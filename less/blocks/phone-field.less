@@ -26,6 +26,9 @@
 
   @media (min-width: @desktop-width) {
     width: 1150px;
+
+    box-shadow: -1000px 0 @gray-light,
+      1000px 0 @gray-light;
   }
 }
 
@@ -68,6 +71,9 @@
 }
 
 .phone-field__input {
+  position: relative;
+  z-index: 5;
+
   margin-top: 15px;
   margin-left: -3px;
   padding-bottom: 17px;
@@ -78,6 +84,7 @@
   font-weight: 100;
 
   border: none;
+  background: none;
   border-bottom: 2px solid @black;
 
   outline: none;
@@ -100,7 +107,6 @@
     font-size: 19px;
     line-height: 18px;
 
-    background-color: inherit;
     border-bottom: 2px solid @black;
   }
 
@@ -143,6 +149,7 @@
   position: absolute;
   top: 33px;
   right: 8px;
+  z-index: 0;
 
   opacity: 0.2;
 

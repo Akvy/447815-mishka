@@ -23,9 +23,34 @@
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     width: 50%;
+    padding-top: 8px;
     padding-bottom: 179px;
     display: flex;
     flex-direction: column;
+  }
+}
+
+.contacts__zigzag-svg {
+  position: absolute;
+  top: 16px;
+  left: -9px;
+
+  width: 320px;
+
+  transform: rotate(180deg);
+
+  @media (min-width: @tablet-width) {
+    top: 68px;
+    left: 0;
+
+    width: 775px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -36px;
+    left: 0;
+
+    width: 1050px;
   }
 }
 
@@ -64,7 +89,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 168px;
+    top: 118px;
     left: 63px;
     right: auto;
   }
@@ -221,8 +246,25 @@
 .contacts__map-image {
   @media (min-width: @desktop-width) {
     position: relative;
-    top: 106px;
+    top: 56px;
     left: -1px;
+  }
+}
+
+.contacts__map-pin {
+  position: absolute;
+  top: 145px;
+  left: 139px;
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    top: 138px;
+    left: 364px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 202px;
+    left: 238px;
   }
 }
 
@@ -248,7 +290,7 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
-    top: 48px;
+    top: -2px;
     right: 350px;
 
     margin: 0;
