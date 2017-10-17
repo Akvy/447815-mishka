@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка. Форма для заказа</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
       <div class="page-header__wrapper">
         <a href="index.html" class="page-header__logo">
@@ -32,15 +36,15 @@
               <li class="header-list__item header-list__item-search header-list__item-search--inner header-list__inner-item header-list__item--inner">
                 <a class="header-list__link header-list__link-search" href="#">Поиск по сайту</a>
 
-                <svg class="header-list__search-svg" width="17.6px" height="17.6px">
-                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                <svg class="header-list__search" width="17.6px" height="17.6px">
+                  <use class="header-list__search-svg" xlink:href="#icon-search"></use>
                 </svg>
               </li>
               <li class="header-list__item header-list__item-basket header-list__item-basket--inner header-list__inner-item header-list__item--inner">
                 <a class="header-list__link header-list__link-basket" href="#">Корзина: пока пуста</a>
 
                 <svg class="header-list__basket-svg" width="20.294px" height="18.849px">
-                  <use xlink:href="img/sprite.svg#icon-basket"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </li>
             </ul>
@@ -83,7 +87,7 @@
 
               <ul class="type-field__list">
                 <li class="type-field__item">
-                  <input class="type-field__input visually-hidden" type="radio" id="inter" name="form-type" value="inter" checked>
+                  <input class="type-field__input visually-hidden" type="radio" id="inter" name="form-type" value="inter" checked="">
 
                   <label class="type-field__radio" for="inter">Аксессуар для интерьера</label>
                 </li>
@@ -99,19 +103,19 @@
 
               <ul class="color-field__list">
                 <li class="color-field__option color-field__option--white">
-                  <input class="color-field__input visually-hidden" type="checkbox" id="checkbox-white" name="white" checked>
+                  <input class="color-field__input visually-hidden" type="checkbox" id="checkbox-white" name="white" checked="">
                   <label class="color-field__color" for="checkbox-white">Белый</label>
 
                   <svg class="color-field__tick-svg color-field__tick-svg--white" width="32.666px" height="22.742px">
-                    <use xlink:href="img/sprite.svg#tick-svg"></use>
+                    <use xlink:href="#icon-tick"></use>
                   </svg>
                 </li>
                 <li class="color-field__option color-field__option--gray">
-                  <input class="color-field__input visually-hidden" type="checkbox" id="checkbox-gray" name="gray" checked>
+                  <input class="color-field__input visually-hidden" type="checkbox" id="checkbox-gray" name="gray" checked="">
                   <label class="color-field__color" for="checkbox-gray">Серый</label>
 
                   <svg class="color-field__tick-svg color-field__tick-svg--gray" width="32.666px" height="22.742px">
-                    <use xlink:href="img/sprite.svg#tick-svg"></use>
+                    <use xlink:href="#icon-tick"></use>
                   </svg>
                 </li>
                 <li class="color-field__option color-field__option--tiffany">
@@ -119,7 +123,7 @@
                   <label class="color-field__color" for="checkbox-tiffany">&laquo;Тиффани&raquo;</label>
 
                   <svg class="color-field__tick-svg color-field__tick-svg--tiffany" width="32.666px" height="22.742px">
-                    <use xlink:href="img/sprite.svg#tick-svg"></use>
+                    <use xlink:href="#icon-tick"></use>
                   </svg>
                 </li>
                 <li class="color-field__option color-field__option--black">
@@ -127,7 +131,7 @@
                   <label class="color-field__color" for="checkbox-black">Черный</label>
 
                   <svg class="color-field__tick-svg color-field__tick-svg--black" width="32.666px" height="22.742px">
-                    <use xlink:href="img/sprite.svg#tick-svg"></use>
+                    <use xlink:href="#icon-tick"></use>
                   </svg>
                 </li>
                 <li class="color-field__option color-field__option--pink">
@@ -135,7 +139,7 @@
                   <label class="color-field__color" for="checkbox-pink">Розовый</label>
 
                   <svg class="color-field__tick-svg color-field__tick-svg--pink" width="32.666px" height="22.742px">
-                    <use xlink:href="img/sprite.svg#tick-svg"></use>
+                    <use xlink:href="#icon-tick"></use>
                   </svg>
                 </li>
                 <li class="color-field__option color-field__option--orange">
@@ -143,7 +147,7 @@
                   <label class="color-field__color" for="checkbox-orange">Оранжевый</label>
 
                   <svg class="color-field__tick-svg color-field__tick-svg--orange" width="32.666px" height="22.742px">
-                    <use xlink:href="img/sprite.svg#tick-svg"></use>
+                    <use xlink:href="#icon-tick"></use>
                   </svg>
                 </li>
               </ul>
@@ -176,7 +180,7 @@
               <input class="phone-field__input" type="text" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
 
               <svg class="phone-field__phone-svg" width="24.829px" height="24.333px">
-                <use xlink:href="img/sprite.svg#phone-svg"></use>
+                <use xlink:href="#icon-phone"></use>
               </svg>
             </fieldset> <!-- end phone-field" -->
 
@@ -186,7 +190,7 @@
               <input class="mail-field__input" type="text" name="email" placeholder="Ваш Email*">
 
               <svg class="mail-field__mail-svg" width="32px" height="32px">
-                <use xlink:href="img/sprite.svg#mail-svg"></use>
+                <use xlink:href="#icon-mail"></use>
               </svg>
             </fieldset> <!-- end mail-field -->
 
@@ -215,7 +219,7 @@
               <span class="visually-hidden">Интернет-магазин MISHKA</span>
 
               <svg class="footer-logo__svg" width="101.615px" height="34.056px">
-                <use xlink:href="img/sprite.svg#footer-logo"></use>
+                <use xlink:href="#icon-logo-footer"></use>
               </svg>
             </a>
           </li>
@@ -226,7 +230,7 @@
                   <span class="visually-hidden">Instagram</span>
 
                   <svg class="footer-social__svg footer-social__insta" width="21.769px" height="21.334px">
-                    <use xlink:href="img/sprite.svg#icon-insta"></use>
+                    <use xlink:href="#icon-insta"></use>
                   </svg>
                 </a>
               </li>
@@ -235,7 +239,7 @@
                   <span class="visually-hidden">Facebook</span>
 
                   <svg class="footer-social__svg footer-social__fb" width="14.962px" height="27.718px">
-                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                    <use xlink:href="#icon-fb"></use>
                   </svg>
                 </a>
               </li>
@@ -244,7 +248,7 @@
                   <span class="visually-hidden">Twitter</span>
 
                   <svg class="footer-social__svg footer-social__twit" width="23.494px" height="20.168px">
-                    <use xlink:href="img/sprite.svg#icon-twit"></use>
+                    <use xlink:href="#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
@@ -258,7 +262,7 @@
                 <span class="visually-hidden">HTML-academy</span>
 
                 <svg class="footer-developer__logo-image" width="26.943px" height="34.09px">
-                  <use xlink:href="img/sprite.svg#footer-logo-icon"></use>
+                  <use xlink:href="#icon-htmlacademy"></use>
                 </svg>
               </a>
             </div>

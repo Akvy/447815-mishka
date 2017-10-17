@@ -208,7 +208,7 @@
   }
 }
 
-.header-list__search-svg,
+.header-list__search,
 .header-list__basket-svg {
   position: absolute;
   top: 26px;
@@ -220,7 +220,8 @@
   transition-duration: 0.3s;
 }
 
-.header-list__search-svg {
+.header-list__search {
+
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
@@ -229,7 +230,7 @@
   }
 
   &:hover {
-    fill: #63d1bb;
+    fill: @teal-light;
 
     opacity: 1;
   }
@@ -258,13 +259,13 @@
   }
 }
 
-.header-list__link-search:hover ~ .header-list__search-svg {
+.header-list__link-search:hover ~ .header-list__search {
   fill: @teal-light;
 
   opacity: 1;
 }
 
-.header-list__link-search:active ~ .header-list__search-svg {
+.header-list__link-search:active ~ .header-list__search {
   fill: @teal-light;
 
   opacity: 0.3;
@@ -281,6 +282,11 @@
 
   opacity: 0.3;
 }
+
+// .header-list__search-svg {
+//   // fill: #231F20;
+//   color: #231F20;
+// }
 
 .header-list__link {
   font-family: "Myriad Pro";
