@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка. Каталог товаров</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
       <div class="page-header__wrapper page-header__wrapper--inner">
         <a href="index.html" class="page-header__logo">
@@ -32,15 +36,15 @@
               <li class="header-list__item header-list__item--inner header-list__item-search header-list__item-search--inner">
                 <a class="header-list__link header-list__link-search" href="#">Поиск по сайту</a>
 
-                <svg class="header-list__search-svg" width="17.6px" height="17.6px">
-                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                <svg class="header-list__search" width="17.6px" height="17.6px">
+                  <use class="header-list__search-svg" xlink:href="#icon-search"></use>
                 </svg>
               </li>
               <li class="header-list__item header-list__item--inner header-list__item-basket header-list__item-basket--inner">
                 <a class="header-list__link header-list__link-basket" href="#">Корзина: пока пуста</a>
 
                 <svg class="header-list__basket-svg" width="20.294px" height="18.849px">
-                  <use xlink:href="img/sprite.svg#icon-basket"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </li>
             </ul>
@@ -91,7 +95,7 @@
                       <b class="shop-catalog__item-price">1 200 руб.</b>
 
                       <svg class="shop-catalog__basket-svg" width="20.294px" height="18.849px">
-                        <use xlink:href="img/sprite.svg#icon-basket"></use>
+                        <use xlink:href="#icon-cart"></use>
                       </svg>
                     </div>
                   </div>
@@ -113,7 +117,7 @@
                       <b class="shop-catalog__item-price shop-catalog__item-price--basket">690 руб.</b>
 
                       <svg class="shop-catalog__basket-svg" width="20.294px" height="18.849px">
-                        <use xlink:href="img/sprite.svg#icon-basket"></use>
+                        <use xlink:href="#icon-cart"></use>
                       </svg>
                     </div>
                   </div>
@@ -135,7 +139,7 @@
                       <b class="shop-catalog__item-price shop-catalog__item-price--basket-big">1 500 руб.</b>
 
                       <svg class="shop-catalog__basket-svg" width="20.294px" height="18.849px">
-                        <use xlink:href="img/sprite.svg#icon-basket"></use>
+                        <use xlink:href="#icon-cart"></use>
                       </svg>
                     </div>
                   </div>
@@ -151,7 +155,7 @@
           <h2 class="videos__header">Процесс производства</h2>
 
           <svg class="videos__camera-svg" width="32px" height="32px">
-            <use xlink:href="img/sprite.svg#camera-svg"></use>
+            <use xlink:href="#icon-video"></use>
           </svg>
 
           <picture>
@@ -161,7 +165,7 @@
           </picture>
 
           <svg class="videos__play-svg" width="100.678px" height="76.891px">
-            <use xlink:href="img/sprite.svg#play-svg"></use>
+            <use xlink:href="#icon-play"></use>
           </svg>
 
           <p class="videos__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -181,7 +185,7 @@
               <span class="visually-hidden">Интернет-магазин MISHKA</span>
 
               <svg class="footer-logo__svg" width="101.615px" height="34.056px">
-                <use xlink:href="img/sprite.svg#footer-logo"></use>
+                <use xlink:href="#icon-logo-footer"></use>
               </svg>
             </a>
           </li>
@@ -192,7 +196,7 @@
                   <span class="visually-hidden">Instagram</span>
 
                   <svg class="footer-social__svg footer-social__insta" width="21.769px" height="21.334px">
-                    <use xlink:href="img/sprite.svg#icon-insta"></use>
+                    <use xlink:href="#icon-insta"></use>
                   </svg>
                 </a>
               </li>
@@ -201,7 +205,7 @@
                   <span class="visually-hidden">Facebook</span>
 
                   <svg class="footer-social__svg footer-social__fb" width="14.962px" height="27.718px">
-                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                    <use xlink:href="#icon-fb"></use>
                   </svg>
                 </a>
               </li>
@@ -210,7 +214,7 @@
                   <span class="visually-hidden">Twitter</span>
 
                   <svg class="footer-social__svg footer-social__twit" width="23.494px" height="20.168px">
-                    <use xlink:href="img/sprite.svg#icon-twit"></use>
+                    <use xlink:href="#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
@@ -224,7 +228,7 @@
                 <span class="visually-hidden">HTML-academy</span>
 
                 <svg class="footer-developer__logo-image" width="26.943px" height="34.09px">
-                  <use xlink:href="img/sprite.svg#footer-logo-icon"></use>
+                  <use xlink:href="#icon-htmlacademy"></use>
                 </svg>
               </a>
             </div>
