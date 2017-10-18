@@ -1,9 +1,21 @@
 .reviews {
-  background-image: none;
+  padding-bottom: 50px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: 300px;
+  background-position: 0 679px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 90px;
+
+    background-size: 750px;
+    background-position: 0 595px;
+  }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: repeat-x;
+    padding-bottom: 0;
+
     background-size: 1050px;
     background-position: 11px 602px;
   }

@@ -1,4 +1,8 @@
 .shop-catalog {
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(@gray-light 170px, @white 170px);
+  }
+
   @media (min-width: @desktop-width) {
     background-image: linear-gradient(@gray-light 251px, @white 251px);
   }
@@ -7,44 +11,41 @@
 .shop-catalog__container {
   background-image: url("../img/bg-zigzag-fill.svg");
   background-repeat: repeat-x;
-  background-position: -28px 237px;
-  background-size: 1150px;
+  background-position: 0 159px;
+  background-size: 778px;
+
+  @media(min-width: @tablet-width) {
+    background-position: 0 159px;
+    background-size: 778px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 1150px;
+    background-position: 30px 237px;
+  }
 }
 
 .shop-catalog__header-wrapper {
   position: relative;
 
+  background-color: @gray-light;
+
   @media (min-width: @tablet-width) {
     width: @tablet-width;
     margin: 0 auto;
+
+    background: none;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1150px;
-  }
-}
-
-.shop-catalog__zigzag-svg {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    top: 156px;
-    left: 0;
-
-    width: 768px;
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 237px;
-
     width: 1150px;
   }
 }
 
 .shop-catalog__header {
   .inner-page-header();
+
+  background-color: none;
 
   @media (min-width: @tablet-width) {
     .tablet-header();
@@ -53,6 +54,8 @@
     padding-top: 38px;
     padding-bottom: 80px;
     padding-left: 2px;
+
+    background-color: none;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,3 +1,13 @@
+.page-header__container {
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(@white 89px, @gray-lighter 89px);
+
+    &--inner {
+      background-image: linear-gradient(@white 89px, @gray-light 89px);
+    }
+  }
+}
+
 .page-header {
   .mobile-container();
 
@@ -20,7 +30,22 @@
   border-bottom: 1px solid @gray;
 
   &--inner {
-    border-bottom: 1px solid @gray-lighter;
+    border-bottom: 1px solid @gray;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 10;
+    bottom: -1px;
+    left: 0;
+
+    content: "";
+    width: 100%;
+    height: 1px;
+
+    background-color: @gray;
+    box-shadow: -300px 0 @gray,
+      300px 0 @gray;
   }
 
   @media (min-width: @tablet-width) {
@@ -44,17 +69,9 @@
       background-color: #ececec;
     }
 
-    &::after {
-      position: absolute;
-      z-index: 10;
+    &:after {
       bottom: 57px;
       left: 0;
-
-      content: "";
-      width: 100%;
-      height: 1px;
-
-      background-color: @gray;
     }
   }
 

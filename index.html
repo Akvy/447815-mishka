@@ -10,59 +10,61 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <picture>
-            <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Интернет-магазин MISHKA">
-          </picture>
-        </a>
+    <div class="page-header__container">
+      <header class="page-header">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Интернет-магазин MISHKA">
+            </picture>
+          </a>
 
-        <nav class="page-header__nav main-nav main-nav--js">
-          <button type="button" class="main-nav__toggle main-nav__toggle--closed">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <nav class="page-header__nav main-nav main-nav--js">
+            <button type="button" class="main-nav__toggle main-nav__toggle--closed">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
 
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list header-list">
-              <li class="header-list__item header-list__item-catalog">
-                <a class="header-list__link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="header-list__item header-list__item-form">
-                <a class="header-list__link" href="form.html">Вязание на заказ</a>
-              </li>
-              <li class="header-list__item header-list__item-search">
-                <a class="header-list__link header-list__link-search" href="#">Поиск по сайту</a>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list header-list">
+                <li class="header-list__item header-list__item-catalog">
+                  <a class="header-list__link" href="catalog.html">Каталог товаров</a>
+                </li>
+                <li class="header-list__item header-list__item-form">
+                  <a class="header-list__link" href="form.html">Вязание на заказ</a>
+                </li>
+                <li class="header-list__item header-list__item-search">
+                  <a class="header-list__link header-list__link-search" href="#">Поиск по сайту</a>
 
-                <svg class="header-list__search" width="17.6px" height="17.6px">
-                  <use class="header-list__search-svg" xlink:href="#icon-search"></use>
-                </svg>
-              </li>
-              <li class="header-list__item header-list__item-basket">
-                <a class="header-list__link header-list__link-basket" href="#">Корзина: пока пуста</a>
+                  <svg class="header-list__search" width="17.6px" height="17.6px">
+                    <use class="header-list__search-svg" xlink:href="#icon-search"></use>
+                  </svg>
+                </li>
+                <li class="header-list__item header-list__item-basket">
+                  <a class="header-list__link header-list__link-basket" href="#">Корзина: пока пуста</a>
 
-                <svg class="header-list__basket-svg" width="20.294px" height="18.849px">
-                  <use xlink:href="#icon-cart"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-        </nav> <!-- end main nav -->
+                  <svg class="header-list__basket-svg" width="20.294px" height="18.849px">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </nav> <!-- end main nav -->
 
-        <ul class="page-header__extra-list">
-          <li class="page-header__extra-item">
-            <a class="page-header__extra-link" href="#">Новые поступления</a>
-          </li>
-          <li class="page-header__extra-item">
-            <a class="page-header__extra-link" href="#">Распродажа</a>
-          </li>
-        </ul><!-- end header-list__extra-list -->
+          <ul class="page-header__extra-list">
+            <li class="page-header__extra-item">
+              <a class="page-header__extra-link" href="#">Новые поступления</a>
+            </li>
+            <li class="page-header__extra-item">
+              <a class="page-header__extra-link" href="#">Распродажа</a>
+            </li>
+          </ul><!-- end header-list__extra-list -->
 
-        <span class="page-header__delivery-note">Бесплатная доставка по России</span>
-      </div>
-    </header> <!-- end header -->
+          <span class="page-header__delivery-note">Бесплатная доставка по России</span>
+        </div>
+      </header> <!-- end header -->
+    </div>
 
     <main class="page-main">
       <section class="features">
@@ -92,7 +94,11 @@
           <picture>
             <source media="(min-width: 1250px)" src="img/bg-zigzag-fill.svg">
             <source media="(min-width: 768px)" src="img/bg-zigzag-fill.svg">
-            <img class="trending__zigzag-svg" src="img/bg-zigzag-fill.svg">
+            <img class="features__zigzag-svg" src="img/bg-zigzag-fill.svg">
+
+            <source media="(min-width: 1250px)" src="img/bg-zigzag-fill.svg">
+            <source media="(min-width: 768px)" src="img/bg-zigzag-fill.svg">
+            <img class="features__zigzag-svg--right" src="img/bg-zigzag-fill.svg">
           </picture>
         </div>
       </section> <!-- end features -->
@@ -148,12 +154,6 @@
 
       <section class="about-us">
         <div class="about-us__wrapper">
-          <picture>
-            <source media="(min-width: 1250px)" src="img/bg-zigzag-line.svg">
-            <source media="(min-width: 768px)" src="img/bg-zigzag-line.svg">
-            <img class="about-us__zigzag-svg" src="img/bg-zigzag-line.svg">
-          </picture>
-
           <h2 class="about-us__header">Коротко о нас:</h2>
 
           <ul class="about-us__list">
@@ -242,12 +242,6 @@
 
       <section class="contacts">
         <div class="contacts__wrapper">
-          <picture>
-            <source media="(min-width: 1250px)" src="img/bg-zigzag-line.svg">
-            <source media="(min-width: 768px)" src="img/bg-zigzag-line.svg">
-            <img class="contacts__zigzag-svg" src="img/bg-zigzag-line.svg">
-          </picture>
-
           <h2 class="contacts__header">Контакты</h2>
 
           <svg class="contacts__flag" width="46.68px" height="81.691px">
