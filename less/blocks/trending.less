@@ -151,6 +151,7 @@
     margin-top: 35px;
     margin-bottom: 29px;
     margin-left: 4px;
+    width: 290px;
   }
 
   @media (min-width: @desktop-width) {
@@ -162,45 +163,6 @@
   position: relative;
 
   border-bottom: 1px solid @gray-light;
-
-  @media (min-width: @tablet-width) {
-    border-bottom: none;
-
-    &::after {
-      position: absolute;
-      bottom: 246px;
-      left: 50px;
-
-      content: "";
-      width: 291px;
-      height: 1px;
-
-      background-color: @gray-light;
-    }
-
-    &--2::after {
-      bottom: 206px;
-    }
-
-    &--3::after {
-      bottom: 166px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::after {
-      bottom: 224px;
-      left: 227px;
-    }
-
-    &--2::after {
-      bottom: 264px;
-    }
-
-    &--3::after {
-      bottom: 304px;
-    }
-  }
 }
 
 .trending__table-class,
@@ -217,6 +179,11 @@
   &--row-3 {
     padding-top: 9px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+    width: 77px;
+  }
 }
 
 .trending__table-value {
@@ -229,10 +196,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 10px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 12px;
+    padding-left: 20px;
   }
 }
 
