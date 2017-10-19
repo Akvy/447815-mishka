@@ -22,6 +22,8 @@
 
     background-color: @gray-light;
     border: none;
+    box-shadow: -700px 0 @gray-light,
+      700px 0 @gray-light;
   }
 
   @media (min-width: @desktop-width) {
@@ -148,7 +150,7 @@
 
 .mail-field__mail-svg {
   position: absolute;
-  top: 33px;
+  bottom: 9px;
   right: 4px;
   z-index: 5;
 
@@ -157,7 +159,7 @@
   transition-duration: 0.4s;
 
   @media (min-width: @tablet-width) {
-    top: 28px;
+    bottom: 59px;
     right: 72px;
   }
 

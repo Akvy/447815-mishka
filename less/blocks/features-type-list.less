@@ -27,7 +27,6 @@
   background-color: @teal-light;
 
   @media (min-width: @tablet-width) {
-
     margin-top: 5px;
     height: 117px;
     flex-grow: 1;
@@ -40,11 +39,19 @@
       transition: 0.3s;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 5px;
+  }
 }
 
 .features-type-list__item:first-of-type {
   @media (min-width: @tablet-width) {
     margin-left: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -53,6 +60,10 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }
 

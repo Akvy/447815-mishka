@@ -9,13 +9,14 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
+
     width: @desktop-width;
 
     &::before {
       position: absolute;
       z-index: 10;
       bottom: 0;
-      left: 284px;
+      left: 234px;
 
       content: "";
       width: 1px;
@@ -28,7 +29,7 @@
       position: absolute;
       z-index: 10;
       bottom: 0;
-      right: 449px;
+      right: 399px;
 
       content: "";
       width: 1px;
@@ -49,7 +50,7 @@
   height: 60px;
 
   border: none;
-  background-color: inherit;
+  background-color: transparent;
   border-bottom: 1px solid @gray;
 
   &--closed::after {

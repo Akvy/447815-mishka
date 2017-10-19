@@ -22,14 +22,15 @@
     width: @desktop-width;
 
     background-color: @white;
-    background-image: none;
+    background-image: linear-gradient(@white 57px, @gray-lighter 57px);
+
+    margin-right: 50px;
 
     &--inner {
-      margin-left: 50px;
       margin-right: 50px;
       width: 1150px;
 
-      background-image: none;
+      background-image: linear-gradient(@white 57px, @gray-light 57px);
     }
   }
 }
@@ -69,7 +70,6 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
-    padding-left: 25px;
     width: 195px;
 
     background-color: @white;
@@ -97,13 +97,8 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
-    padding-left: 98px;
-    width: 294px;
-
-    &--inner {
-      width: 244px;
-      padding-left: 49px;
-    }
+    padding-left: 50px;
+    width: 269px;
   }
 }
 
@@ -151,8 +146,8 @@
     position: relative;
 
     margin-bottom: 0;
-    padding-left: 270px;
-    width: 390px;
+    padding-left: 70px;
+    width: 350px;
 
     border: none;
   }
@@ -164,6 +159,7 @@
   padding-left: 30px;
 
   &--inner {
+    padding-left: 52px;
     width: 321px;
   }
 
@@ -176,10 +172,11 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding-left: 37px;
-    width: 371px;
+    padding-left: 52px;
+    width: 311px;
 
     &--inner {
+      padding-left: 37px;
       width: 321px;
     }
   }
@@ -197,6 +194,10 @@
 }
 
 .header-list__link-basket {
+  &--inner {
+    padding-left: 25px;
+  }
+
   @media (min-width: @tablet-width) {
     padding-left: 50px;
 
@@ -205,6 +206,10 @@
 
   @media (min-width: @desktop-width) {
     letter-spacing: 0;
+
+    &--inner {
+      padding-left: 65px;
+    }
   }
 }
 
@@ -243,7 +248,7 @@
 
   @media (min-width: @desktop-width) {
     top: 5px;
-    left: 344px;
+    left: 319px;
   }
 }
 
@@ -255,7 +260,7 @@
 
   @media (min-width: @desktop-width) {
     top: 4px;
-    left: 37px;
+    left: 51px;
   }
 }
 
@@ -283,16 +288,10 @@
   opacity: 0.3;
 }
 
-// .header-list__search-svg {
-//   // fill: #231F20;
-//   color: #231F20;
-// }
-
 .header-list__link {
-  font-family: "Myriad Pro";
-
   font-size: 17px;
   line-height: 24px;
+  font-weight: 700;
 
   .link-reseter();
 
@@ -307,9 +306,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    font-family: "Open Sans";
     font-size: 15px;
-    font-weight: 700;
 
     &--basket {
       font-size: 16px;

@@ -1,8 +1,13 @@
 .contacts {
   margin-bottom: 39px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
+    width: 768px;
     margin: 0 auto;
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 1050px;
     display: flex;
   }
@@ -14,7 +19,7 @@
   position: relative;
 
   padding: 28px;
-  padding-top: 58px;
+  padding-top: 8px;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
@@ -30,27 +35,6 @@
   }
 }
 
-.contacts__zigzag-svg {
-  position: absolute;
-  top: 16px;
-  left: -9px;
-
-  width: 320px;
-
-  transform: rotate(180deg);
-
-  @media (min-width: @tablet-width) {
-    top: 68px;
-    left: 0;
-
-    width: 775px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
 .contacts__header {
   margin: 0;
   padding: 0;
@@ -62,7 +46,7 @@
   @media (min-width: @tablet-width) {
     .tablet-header();
 
-    margin-top: 87px;
+    margin-top: 47px;
     margin-left: 18px;
   }
 
@@ -79,7 +63,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 129px;
+    top: 40px;
     right: 53px;
 
     display: block;
@@ -120,21 +104,20 @@
   }
 }
 
-.contacts__table-row-1,
-.contacts__table-row-2 {
+.contacts__table-row {
   @media (min-width: @tablet-width) {
     width: 325px;
-  }
-}
 
-.contacts__table-row-2 {
-  @media (min-width: @tablet-width) {
-    margin-left: 9px;
+    &--2 {
+      margin-left: 9px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 30px;
-    margin-left: 0;
+    &--2 {
+      margin-top: 30px;
+      margin-left: 0;
+    }
   }
 }
 

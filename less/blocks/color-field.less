@@ -17,6 +17,8 @@
     height: 312px;
 
     background-color: @gray-light;
+    box-shadow: -700px 0 @gray-light,
+      700px 0 @gray-light;
   }
 
   @media (min-width: @desktop-width) {
@@ -302,5 +304,17 @@
 }
 
 .color-field__input:checked:active ~ .color-field__tick-svg {
+  display: none;
+}
+
+
+.color-field__input:disabled ~ .color-field__color::before {
+  opacity: 0.1;
+
+  background-color: @white;
+  border-color: @black;
+}
+
+.color-field__input:disabled ~ .color-field__tick-svg {
   display: none;
 }

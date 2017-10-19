@@ -1,5 +1,13 @@
 .about-us {
-  background-image: none;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: 300px;
+  background-position: 0 6px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 750px;
+    background-position: 0 46px;
+  }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/bg-zigzag-line.svg");
@@ -27,7 +35,7 @@
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    padding-left: 48px;
+    padding-left: 0;
   }
 }
 
@@ -65,7 +73,7 @@
     .desktop-header();
 
     margin-top: 75px;
-    margin-left: 224px;
+    margin-left: 221px;
   }
 }
 
@@ -83,7 +91,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 1px;
-    margin-left: 228px;
+    margin-left: 225px;
     width: 700px;
   }
 }

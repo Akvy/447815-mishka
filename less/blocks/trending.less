@@ -9,14 +9,14 @@
     position: relative;
 
     padding: 0;
-    padding-top: 24px;
+    padding-top: 47px;
     padding-left: 46px;
     width: @tablet-width;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 10px;
-    padding-left: 126px;
+    padding-left: 76px;
     width: @desktop-width;
   }
 }
@@ -31,7 +31,7 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 140px;
-    left: 142px;
+    left: 92px;
 
     margin: 0;
     padding: 0;
@@ -151,6 +151,7 @@
     margin-top: 35px;
     margin-bottom: 29px;
     margin-left: 4px;
+    width: 290px;
   }
 
   @media (min-width: @desktop-width) {
@@ -162,45 +163,6 @@
   position: relative;
 
   border-bottom: 1px solid @gray-light;
-
-  @media (min-width: @tablet-width) {
-    border-bottom: none;
-
-    &::after {
-      position: absolute;
-      bottom: 246px;
-      left: 50px;
-
-      content: "";
-      width: 291px;
-      height: 1px;
-
-      background-color: @gray-light;
-    }
-
-    &--2::after {
-      bottom: 206px;
-    }
-
-    &--3::after {
-      bottom: 166px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::after {
-      bottom: 224px;
-      left: 277px;
-    }
-
-    &--2::after {
-      bottom: 264px;
-    }
-
-    &--3::after {
-      bottom: 304px;
-    }
-  }
 }
 
 .trending__table-class,
@@ -217,6 +179,11 @@
   &--row-3 {
     padding-top: 9px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+    width: 77px;
+  }
 }
 
 .trending__table-value {
@@ -229,10 +196,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 10px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 12px;
+    padding-left: 20px;
   }
 }
 
@@ -249,7 +213,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 275px;
+    left: 225px;
   }
 }
 
@@ -270,33 +234,23 @@
 
   margin-top: 26px;
   padding-top: 14px;
+  padding-bottom: 10px;
+
+  text-decoration: none;
 
   @media (min-width: @tablet-width) {
     margin-top: 34px;
-    padding-top: 14px;
+    padding-top: 10px;
     padding-bottom: 14px;
     padding-left: 99px;
-    padding-right: 100px;
+    padding-right: 98px;
   }
 }
 
-.trending__zigzag-svg {
-  display: none;
+.trending__button span {
+  .link-reseter();
 
-  @media (min-width: @tablet-width) {
-    position: relative;
-    top: -10px;
-    left: 0;
-
-    width: 768px;
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: -16px;
-    left: 1px;
-
-    width: 1248px;
-    height: 37px;
-  }
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: @black;
 }

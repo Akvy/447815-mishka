@@ -1,19 +1,29 @@
 .features {
+  overflow: hidden;
+
+  background-color: @gray-lighter;
+
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(@gray-lighter 700px, @white 700px);
+
+    background-color: none;
+  }
+
   @media (min-width: @desktop-width) {
-    // background-image: linear-gradient(@gray-lighter 742px, @white 742px);
     height: 742px;
     margin-bottom: 38px;
 
     background-color: @gray-lighter;
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-repeat: repeat-x;
-    background-position: -39px 727px;
-    background-size: 1248px;
+    background-image: linear-gradient(@gray-lighter 745px, @white 745px);
   }
 }
 
 .features__wrapper {
+  position: relative;
+
   .mobile-container();
+  background-color: @gray-lighter;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-position: -128.5px -18px;
   background-repeat: no-repeat;
@@ -39,7 +49,7 @@
   @media (min-width: @desktop-width) {
     width: @desktop-width;
 
-    background-position: 0 -1px;
+    background-position: -50px -1px;
     background-size: 1250px 746px;
   }
 }
@@ -85,4 +95,42 @@
   margin-top: -1px;
   margin-left: 10px;
   padding-right: 10px;
+}
+
+.features__zigzag-svg {
+  display: none;
+
+  &--right {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: -12px;
+    left: -364px;
+
+    width: 758px;
+    display: block;
+
+    &--right {
+      position: absolute;
+      bottom: -12px;
+      left: 379px;
+
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: -13px;
+    left: -575px;
+
+    width: 1150px;
+
+    &--right {
+      position: absolute;
+      bottom: -13px;
+      left: 574px;
+    }
+  }
 }

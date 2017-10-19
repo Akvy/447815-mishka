@@ -2,67 +2,73 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style-min.css">
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <picture>
-            <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Интернет-магазин MISHKA">
-          </picture>
-        </a>
+    <div class="page-header">
+      <header class="page-header__container">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Интернет-магазин MISHKA">
+            </picture>
+          </a>
 
-        <nav class="page-header__nav main-nav main-nav--js">
-          <button type="button" class="main-nav__toggle main-nav__toggle--closed">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <nav class="page-header__nav main-nav main-nav--js">
+            <button type="button" class="main-nav__toggle main-nav__toggle--closed">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
 
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list header-list">
-              <li class="header-list__item header-list__item-catalog">
-                <a class="header-list__link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="header-list__item header-list__item-form">
-                <a class="header-list__link" href="form.html">Вязание на заказ</a>
-              </li>
-              <li class="header-list__item header-list__item-search">
-                <a class="header-list__link header-list__link-search" href="#">Поиск по сайту</a>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list header-list">
+                <li class="header-list__item header-list__item-catalog">
+                  <a class="header-list__link" href="catalog.html">Каталог товаров</a>
+                </li>
+                <li class="header-list__item header-list__item-form">
+                  <a class="header-list__link" href="form.html">Вязание на заказ</a>
+                </li>
+                <li class="header-list__item header-list__item-search">
+                  <a class="header-list__link header-list__link-search" href="#">Поиск по сайту</a>
 
-                <svg class="header-list__search" width="17.6px" height="17.6px">
-                  <use class="header-list__search-svg" xlink:href="#icon-search"></use>
-                </svg>
-              </li>
-              <li class="header-list__item header-list__item-basket">
-                <a class="header-list__link header-list__link-basket" href="#">Корзина: пока пуста</a>
+                  <svg class="header-list__search" width="17.6px" height="17.6px">
+                    <use class="header-list__search-svg" xlink:href="#icon-search"></use>
+                  </svg>
+                </li>
+                <li class="header-list__item header-list__item-basket">
+                  <a class="header-list__link header-list__link-basket" href="#">Корзина: пока пуста</a>
 
-                <svg class="header-list__basket-svg" width="20.294px" height="18.849px">
-                  <use xlink:href="#icon-cart"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-        </nav> <!-- end main nav -->
+                  <svg class="header-list__basket-svg" width="20.294px" height="18.849px">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </nav> <!-- end main nav -->
 
-        <ul class="page-header__extra-list">
-          <li class="page-header__extra-item">
-            <a class="page-header__extra-link" href="#">Новые поступления</a>
-          </li>
-          <li class="page-header__extra-item">
-            <a class="page-header__extra-link" href="#">Распродажа</a>
-          </li>
-        </ul><!-- end header-list__extra-list -->
+          <ul class="page-header__extra-list">
+            <li class="page-header__extra-item">
+              <a class="page-header__extra-link" href="#">Новые поступления</a>
+            </li>
+            <li class="page-header__extra-item">
+              <a class="page-header__extra-link" href="#">Распродажа</a>
+            </li>
+          </ul><!-- end header-list__extra-list -->
 
-        <span class="page-header__delivery-note">Бесплатная доставка по России</span>
-      </div>
-    </header> <!-- end header -->
+          <span class="page-header__delivery-note">Бесплатная доставка по России</span>
+        </div>
+      </header> <!-- end header -->
+    </div>
 
     <main class="page-main">
       <section class="features">
@@ -90,9 +96,14 @@
           </ul>
 
           <picture>
-            <source media="(min-width: 1250px)" src="img/bg-zigzag-fill.svg">
-            <source media="(min-width: 768px)" src="img/bg-zigzag-fill.svg">
-            <img class="trending__zigzag-svg" src="img/bg-zigzag-fill.svg">
+            <source media="(min-width: 1150px)" srcset="img/bg-zigzag-fill.svg">
+            <source media="(min-width: 768px)" srcset="img/bg-zigzag-fill.svg">
+            <img class="features__zigzag-svg" src="img/bg-zigzag-fill.svg" alt="зигзаг">
+          </picture>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/bg-zigzag-fill.svg">
+            <source media="(min-width: 768px)" srcset="img/bg-zigzag-fill.svg">
+            <img class="features__zigzag-svg features__zigzag-svg--right" src="img/bg-zigzag-fill.svg" alt="зигзаг">
           </picture>
         </div>
       </section> <!-- end features -->
@@ -126,11 +137,11 @@
             </div>
 
             <picture>
-              <source type="image/webp" media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
               <img class="trending__picture" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
             </picture>
@@ -139,21 +150,15 @@
           <div class="trending__price-wrapper">
             <span class="trending__price">Цена: 990 руб.</span>
 
-            <button type="button" class="trending__button button">
+            <a href="#" class="trending__button button">
               <span>Заказать</span>
-            </button>
+            </a>
           </div>
         </div>
       </section> <!-- end trending -->
 
       <section class="about-us">
         <div class="about-us__wrapper">
-          <picture>
-            <source media="(min-width: 1250px)" src="img/bg-zigzag-line.svg">
-            <source media="(min-width: 768px)" src="img/bg-zigzag-line.svg">
-            <img class="about-us__zigzag-svg" src="img/bg-zigzag-line.svg">
-          </picture>
-
           <h2 class="about-us__header">Коротко о нас:</h2>
 
           <ul class="about-us__list">
@@ -242,12 +247,6 @@
 
       <section class="contacts">
         <div class="contacts__wrapper">
-          <picture>
-            <source media="(min-width: 1250px)" src="img/bg-zigzag-line.svg">
-            <source media="(min-width: 768px)" src="img/bg-zigzag-line.svg">
-            <img class="contacts__zigzag-svg" src="img/bg-zigzag-line.svg">
-          </picture>
-
           <h2 class="contacts__header">Контакты</h2>
 
           <svg class="contacts__flag" width="46.68px" height="81.691px">
@@ -255,13 +254,13 @@
           </svg>
 
           <table class="contacts__table">
-            <tr class="contacts__table-row-1">
+            <tr class="contacts__table-row contacts__table-row--1">
               <td class="contacts__table-class">e-mail:</td>
               <td class="contacts__table-value">
                 <a class="contacts__table-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
               </td>
             </tr>
-            <tr class="contacts__table-row-2">
+            <tr class="contacts__table-row contacts__table-row--2">
               <td class="contacts__table-class contacts__table-class--adress">адрес:</td>
               <td class="contacts__table-value contacts__table-value--adress">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</td>
             </tr>
@@ -272,11 +271,11 @@
           <span class="visually-hidden">Карта проезда</span>
 
           <picture>
-            <source type="image/webp" media="(min-width: 1250px)" srcset="img/map-desktop@1x.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" src="img/map-mobile@1x.webp" srcset="img/map-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1250px)" srcset="img/map-desktop@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта проезда">
           </picture>
@@ -369,8 +368,8 @@
           </li>
           <li class="main-footer__item">
             <div class="main-footer__item footer-developer">
-              <a class="footer-developer__link" href="#">
-                <p class="footer-developer__developed" href="https://htmlacademy.ru/intensive/adaptive">Разработано</p>
+              <a class="footer-developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+                <p class="footer-developer__developed">Разработано</p>
 
                 <span class="visually-hidden">HTML-academy</span>
 
