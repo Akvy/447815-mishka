@@ -99,21 +99,20 @@
   }
 }
 
-.contacts__table-row-1,
-.contacts__table-row-2 {
+.contacts__table-row {
   @media (min-width: @tablet-width) {
     width: 325px;
-  }
-}
 
-.contacts__table-row-2 {
-  @media (min-width: @tablet-width) {
-    margin-left: 9px;
+    &--2 {
+      margin-left: 9px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 30px;
-    margin-left: 0;
+    &--2 {
+      margin-top: 30px;
+      margin-left: 0;
+    }
   }
 }
 

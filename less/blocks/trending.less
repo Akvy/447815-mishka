@@ -16,7 +16,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 10px;
-    padding-left: 126px;
+    padding-left: 76px;
     width: @desktop-width;
   }
 }
@@ -31,7 +31,7 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 140px;
-    left: 142px;
+    left: 92px;
 
     margin: 0;
     padding: 0;
@@ -190,7 +190,7 @@
   @media (min-width: @desktop-width) {
     &::after {
       bottom: 224px;
-      left: 277px;
+      left: 227px;
     }
 
     &--2::after {
@@ -249,7 +249,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 275px;
+    left: 225px;
   }
 }
 
@@ -270,12 +270,23 @@
 
   margin-top: 26px;
   padding-top: 14px;
+  padding-bottom: 10px;
+
+  text-decoration: none;
 
   @media (min-width: @tablet-width) {
     margin-top: 34px;
-    padding-top: 14px;
+    padding-top: 10px;
     padding-bottom: 14px;
     padding-left: 99px;
-    padding-right: 100px;
+    padding-right: 98px;
   }
+}
+
+.trending__button span {
+  .link-reseter();
+
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: @black;
 }

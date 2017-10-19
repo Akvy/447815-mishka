@@ -168,3 +168,10 @@
   border: 2px solid @asphalt;
   opacity: 0.3;
 }
+
+.type-field__input:checked:disabled ~ .type-field__radio::before {
+  opacity: 0.1;
+
+  background-color: @white;
+  border-color: @black;
+}
