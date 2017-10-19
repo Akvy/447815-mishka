@@ -6,6 +6,11 @@
       background-image: linear-gradient(@white 89px, @gray-light 89px);
     }
   }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
 }
 
 .page-header__container {
@@ -83,7 +88,7 @@
       bottom: 0;
       left: 50px;
 
-      width: 1150px;
+      width: 1050px;
 
       box-shadow: -1000px 0 @gray,
         1000px 0 @gray;
