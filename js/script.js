@@ -4,7 +4,7 @@ var trendToggle = document.querySelector('.trending__button');
 var trendModal = document.querySelector('.modal-cart');
 var modalWrapper = document.querySelector('.modal-cart__wrapper');
 
-navMain.classList.remove('main-nav--nojs');
+navMain.classList.remove('main-nav--js');
 
 navToggle.addEventListener('click', function() {
   if (navToggle.classList.contains('main-nav__toggle--closed')) {
@@ -26,31 +26,20 @@ trendToggle.addEventListener('click', function() {
   }
 });
 
-// modalWrapper.addEventListener('click', function() {
-//   if (trendModal.classList.contains('modal-cart--opened')) {
-//     trendModal.classList.remove('modal-cart--opened');
-//     trendModal.classList.add('modal-cart--closed');
-//   }
-//   else {
-//     trendModal.classList.remove('modal-cart--closed');
-//     trendModal.classList.add('modal-cart--opened');
-//   }
-// });
-
-window.addEventListener("keydown", function(evt) {
+window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27) {
-    if (trendModal.classList.contains("modal-cart--opened")) {
-      trendModal.classList.remove("modal-cart--opened");
-      trendModal.classList.add("modal-cart--closed");
+    if (trendModal.classList.contains('modal-cart--opened')) {
+      trendModal.classList.remove('modal-cart--opened');
+      trendModal.classList.add('modal-cart--closed');
     }
   }
 });
 
-window.addEventListener("keydown", function(evt) {
+window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27) {
-    if (navToggle.classList.contains("main-nav__toggle--opened")) {
-      navToggle.classList.remove("main-nav__toggle--opened");
-      navToggle.classList.add("main-nav__toggle--closed");
+    if (navToggle.classList.contains('main-nav__toggle--opened')) {
+      navToggle.classList.remove('main-nav__toggle--opened');
+      navToggle.classList.add('main-nav__toggle--closed');
     }
   }
 });
