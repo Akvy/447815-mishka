@@ -5,6 +5,19 @@
   @media (min-width: @tablet-width) {
     margin-left: 0;
     width: @tablet-width;
+
+    &::after {
+      position: absolute;
+      z-index: 10;
+      bottom: 57px;
+      right: 397px;
+
+      content: "";
+      width: 1px;
+      height: 90px;
+
+      background-color: @gray;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -13,16 +26,8 @@
     width: @desktop-width;
 
     &::before {
-      position: absolute;
-      z-index: 10;
       bottom: 0;
       left: 234px;
-
-      content: "";
-      width: 1px;
-      height: 90px;
-
-      background-color: @gray;
     }
 
     &::after {
@@ -115,7 +120,7 @@
 }
 
 .main-nav__toggle--opened ~ .main-nav__wrapper,
-.main-nav--nojs .main-nav__wrapper {
+.main-nav--js .main-nav__wrapper {
   position: absolute;
   right: -20px;
   top: 59px;
@@ -125,4 +130,9 @@
   @media (min-width: @tablet-width) {
     position: static;
   }
+}
+
+.main-nav--js .main-nav__toggle,
+.main-nav--js .main-nav__toggle--closed {
+  display: none;
 }
