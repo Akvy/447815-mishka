@@ -150,7 +150,7 @@
           <div class="trending__price-wrapper">
             <span class="trending__price">Цена: 990 руб.</span>
 
-            <a href="#" class="trending__button button">
+            <a href="order.html" class="trending__button button" data-modal-button>
               <span>Заказать</span>
             </a>
           </div>
@@ -210,88 +210,92 @@
 
       <section class="reviews">
         <div class="reviews__wrapper">
-          <h2 class="reviews__header">Отзывы</h2>
+          <div class="reviews__container">
+            <h2 class="reviews__header">Отзывы</h2>
 
-          <p class="reviews__item">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="reviews__item">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 
-          <div class="reviews__author-wrapper">
-            <div class="reviews__author-box">
-              <b class="reviews__author">Анастасия Красильникова</b>
+            <div class="reviews__author-wrapper">
+              <div class="reviews__author-box">
+                <b class="reviews__author">Анастасия Красильникова</b>
 
-              <span class="reviews__author-mail">@misssssiskras</span>
+                <span class="reviews__author-mail">@misssssiskras</span>
+              </div>
+
+              <p class="reviews__toggle-box">
+                <button type="button" class="reviews__prev">
+                  <span class="visually-hidden">Предыдущий</span>
+
+                  <svg class="reviews__prev-arrow" width="50px" height="26.003px">
+                    <use xlink:href="#icon-left-arrow"></use>
+                  </svg>
+                </button>
+                <button type="button" class="reviews__next">
+                  <span class="visually-hidden">Следующий</span>
+
+                  <svg class="reviews__next-arrow" width="50px" height="26.003px">
+                    <use xlink:href="#icon-right-arrow"></use>
+                  </svg>
+                </button>
+              </p>
+
+              <a href="feedback.html" class="reviews__button button">
+                <span>Написать</span>
+              </a>
             </div>
-
-            <p class="reviews__toggle-box">
-              <button type="button" class="reviews__prev">
-                <span class="visually-hidden">Предыдущий</span>
-
-                <svg class="reviews__prev-arrow" width="50px" height="26.003px">
-                  <use xlink:href="#icon-left-arrow"></use>
-                </svg>
-              </button>
-              <button type="button" class="reviews__next">
-                <span class="visually-hidden">Следующий</span>
-
-                <svg class="reviews__next-arrow" width="50px" height="26.003px">
-                  <use xlink:href="#icon-right-arrow"></use>
-                </svg>
-              </button>
-            </p>
-
-            <button type="button" class="reviews__button button">
-              <span>Написать</span>
-            </button>
           </div>
         </div>
       </section> <!-- end reviews -->
 
       <section class="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="contacts__header">Контакты</h2>
+        <div class="contacts__container">
+          <div class="contacts__wrapper">
+            <h2 class="contacts__header">Контакты</h2>
 
-          <svg class="contacts__flag" width="46.68px" height="81.691px">
-            <use xlink:href="#icon-flag"></use>
-          </svg>
+            <svg class="contacts__flag" width="46.68px" height="81.691px">
+              <use xlink:href="#icon-flag"></use>
+            </svg>
 
-          <table class="contacts__table">
-            <tr class="contacts__table-row contacts__table-row--1">
-              <td class="contacts__table-class">e-mail:</td>
-              <td class="contacts__table-value">
-                <a class="contacts__table-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-              </td>
-            </tr>
-            <tr class="contacts__table-row contacts__table-row--2">
-              <td class="contacts__table-class contacts__table-class--adress">адрес:</td>
-              <td class="contacts__table-value contacts__table-value--adress">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="contacts__map-wrapper">
-          <span class="visually-hidden">Карта проезда</span>
-
-          <div class="contacts__map-interactive">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2scz!4v1508497341792" width="322" height="457" style="border:0" allowfullscreen>
-            </iframe>
+            <table class="contacts__table">
+              <tr class="contacts__table-row contacts__table-row--1">
+                <td class="contacts__table-class">e-mail:</td>
+                <td class="contacts__table-value">
+                  <a class="contacts__table-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+                </td>
+              </tr>
+              <tr class="contacts__table-row contacts__table-row--2">
+                <td class="contacts__table-class contacts__table-class--adress">адрес:</td>
+                <td class="contacts__table-value contacts__table-value--adress">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</td>
+              </tr>
+            </table>
           </div>
 
-          <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+          <div class="contacts__map-wrapper">
+            <span class="visually-hidden">Карта проезда</span>
 
-            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта проезда">
-          </picture>
+            <div class="contacts__map-interactive">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2scz!4v1508497341792" width="322" height="457" style="border:0" allowfullscreen>
+              </iframe>
+            </div>
 
-          <svg class="contacts__map-pin" width="66px" height="100.801px">
-            <use xlink:href="#icon-map-pin"></use>
-          </svg>
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
 
-          <button type="button" class="contacts__button button">
-            <span>Напишите нам</span>
-          </button>
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта проезда">
+            </picture>
+
+            <svg class="contacts__map-pin" width="66px" height="100.801px">
+              <use xlink:href="#icon-map-pin"></use>
+            </svg>
+
+            <a href="write-us.html" class="contacts__button button">
+              <span>Напишите нам</span>
+            </a>
+          </div>
         </div>
       </section> <!-- end contacts -->
 
@@ -320,9 +324,9 @@
               </ul>
             </form>
 
-            <button type="button" class="modal-cart__button button">
+            <a href="order.html" class="modal-cart__button button">
               <span>Добавить</span>
-            </button>
+            </a>
           </div>
         </div>
       </section>

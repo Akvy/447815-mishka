@@ -1,9 +1,11 @@
 .modal-cart {
-  &--closed {
+  &--closed,
+  &--closed-inner {
     display: none;
   }
 
-  &--opened {
+  &--opened,
+  &--opened-inner {
     position: fixed;
     left: 0;
     top: 0;
@@ -143,11 +145,12 @@
   margin-top: 30px;
   margin-bottom: 50px;
   padding: 17px 86px;
+  display: inline-block;
 
   font-size: 17px;
   line-height: 16px;
   color: @white;
-  font-weight: 700;
+  letter-spacing: 1px;
 
   background-color: @teal-light;
   border: none;

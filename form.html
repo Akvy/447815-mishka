@@ -160,12 +160,12 @@
                 <li class="name-field__item">
                   <label for="name" class="name-field__input-heading">Имя:</label>
 
-                  <input class="name-field__input" type="text" name="name" id="name" placeholder="Введите ваше имя*">
+                  <input class="name-field__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
                 </li>
                 <li class="name-field__item">
                   <label for="lastname" class="name-field__input-heading">Фамилия:</label>
 
-                  <input class="name-field__input name-field__input--lastname" type="text" name="lastname" id="lastname" placeholder="Укажите фамилию*">
+                  <input class="name-field__input name-field__input--lastname" type="text" name="lastname" id="lastname" placeholder="Укажите фамилию*" required>
                 </li>
                 <li class="name-field__item">
                   <label for="patronym" class="name-field__input-heading">Отчество:</label>
@@ -177,7 +177,7 @@
             <fieldset class="order-page__field phone-field">
               <legend class="phone-field__heading">Тел</legend>
 
-              <input class="phone-field__input" type="text" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
+              <input class="phone-field__input" type="tel" name="phone" placeholder="+7 ХХХ ХХ ХХ*" required>
 
               <svg class="phone-field__phone-svg" width="24.829px" height="24.333px">
                 <use xlink:href="#icon-phone"></use>
@@ -187,7 +187,7 @@
             <fieldset class="order-page__field mail-field">
               <legend class="mail-field__heading">E-mail</legend>
 
-              <input class="mail-field__input" type="text" name="email" placeholder="Ваш Email*">
+              <input class="mail-field__input" type="email" name="email" placeholder="Ваш Email*" required>
 
               <svg class="mail-field__mail-svg" width="32px" height="32px">
                 <use xlink:href="#icon-mail"></use>
@@ -271,6 +271,6 @@
       </div>
     </footer> <!-- end footer -->
 
-    <script src="js/script.js"></script>
+    <script src="js/script-min.js"></script>
   </body>
 </html>

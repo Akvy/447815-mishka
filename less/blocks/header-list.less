@@ -191,13 +191,18 @@
 
 .header-list__link-basket {
   &--inner {
-    padding-left: 25px;
+    top: 0;
+    left: -20px;
   }
 
   @media (min-width: @tablet-width) {
     padding-left: 50px;
 
     letter-spacing: 1.2px;
+
+    &--inner {
+      left: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {

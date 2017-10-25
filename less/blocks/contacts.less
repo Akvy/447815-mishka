@@ -1,4 +1,26 @@
 .contacts {
+  padding-top: 50px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: 300px;
+  background-position: 0 16px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 90px;
+
+    background-size: 750px;
+    background-position: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+
+    background-size: 1050px;
+    background-position: 11px 53px;
+  }
+}
+
+.contacts__container {
   margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
@@ -46,7 +68,7 @@
   @media (min-width: @tablet-width) {
     .tablet-header();
 
-    margin-top: 47px;
+    margin-top: 18px;
     margin-left: 18px;
   }
 
@@ -63,7 +85,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 40px;
+    top: 12px;
     right: 53px;
 
     display: block;
@@ -107,6 +129,7 @@
 .contacts__table-row {
   @media (min-width: @tablet-width) {
     width: 325px;
+    display: inline-block;
 
     &--2 {
       margin-left: 9px;
@@ -277,22 +300,25 @@
 
 .contacts__button {
   .typical-button();
+  display: inline-block;
 
   margin-top: 39px;
   margin-left: 30px;
   padding: 56px;
   padding-top: 13px;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 53px;
 
+  text-align: center;
+  color: @black;
   letter-spacing: 1px;
 
   @media (min-width: @tablet-width) {
     margin-top: 55px;
     margin-left: 269px;
     padding-left: 37px;
-    padding-right: 33px;
+    padding-right: 36px;
   }
 
   @media (min-width: @desktop-width) {

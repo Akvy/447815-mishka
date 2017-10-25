@@ -8,12 +8,20 @@
 
 .footer-logo__link {
   position: relative;
+  top: 50px;
+  left: 50px;
+
+  width: 100px;
+  height: 35px;
+  display: inline-block;
+
+  @media (min-width: @desktop-width) {
+    left: 51px;
+  }
 }
 
 .footer-logo__svg {
   position: absolute;
-  top: 50px;
-  left: 50px;
 
   transition-duration: 0.3s;
 
@@ -25,9 +33,5 @@
     .opacity-active();
 
     fill: @teal;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 51px;
   }
 }
